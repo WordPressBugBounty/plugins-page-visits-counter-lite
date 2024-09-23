@@ -1,0 +1,2 @@
+<?php
+// Silenece is golden!

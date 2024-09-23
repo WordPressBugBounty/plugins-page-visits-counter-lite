@@ -1,0 +1,141 @@
+/**
+ * VISITED PAGES LIST
+ */
+
+
+// LIST WRAPPER
+.StrCPVisits_db_list_wrapper
+	width: 100%
+	padding-top: 6px
+	overflow: hidden
+	min-height: 172px
+	max-height: 550px
+	overflow-y: scroll
+
+
+
+// ROW - ( Override accordion button )
+.StrCPVisits_db_list_row
+	position: relative
+	justify-content: space-between
+	background-color: $db-pages-list-row-background-color !important
+	border-bottom: $db-pages-list-row-border-bottom !important
+	padding: 13px 10px 13px 5px !important
+	margin: 0
+	font-size: 13px !important
+	width: 100%
+	box-sizing: border-box
+	overflow: hidden
+	margin-left: 0
+	height: auto
+	transition: background-color 1s, margin-left .5s ease 1s, height .3s ease 1.5s, padding .3s ease 1.5s !important
+
+	// arrow
+	&:before
+		color: $db-pages-list-row-arrow-color
+
+	&:hover
+		background-color: $db-pages-list-row-background-color-hover !important
+
+
+// Checkbox wrapper
+.StrCPVisits_db_list_chkbox_wrapper
+	position: absolute
+	display: flex
+	align-items: center
+	justify-content: center
+	top: 0
+	bottom: 0
+	left: 0
+	width: 33px
+
+//Checkbox
+.StrCPVisits_db_list_chkbox
+	margin: 0 !important
+
+
+// PAGE NAME
+.StrCPVisits_db_list_page_name
+	display: block
+	padding: 0 20px 0 0
+	width: 100%
+	text-align: left
+	color: $db-pages-list-page-name-color
+	word-break: break-all
+
+// NUMBER OF VISITS
+.StrCPVisits_db_list_visits_nr
+	font-weight: $db-pages-list-nr-font-weight
+	color: $db-pages-list-nr-color
+
+
+
+
+// ROW SubTAB - ( Override accordion panel )
+.StrCPVisits_db_list_row_tab
+	background-color: $db-pages-list-subrow-background-color !important
+	box-shadow: inset 0px 10px 10px -15px $db-pages-list-subrow-top-shadow-color
+	border-bottom: $db-pages-list-subrow-border-bottom-color !important
+
+
+// RESPONSE BOX
+.StrCPVisits_db_list_row_msg_box
+	display: none
+	text-align: center
+	background-color: $db-pages-list-subrow-resp-box-background-color
+	padding: 1px 0
+	box-shadow: inset 0px 0px 2px 0px $db-pages-list-subrow-resp-box-border-color
+	margin-bottom: 15px
+
+
+// ROW SubTAB - INNER WRAPPER
+.StrCPVisits_db_list_row_inner_wrapper
+	display: flex !important
+	justify-content: space-between
+	background-color: transparent !important
+
+
+// FORM
+.StrCPVisits-dblist-page-visits-form
+	display: flex
+	align-items: center
+
+	// SPINNER
+	.StrCPVisits-loading-spinner-wrapper-toggle
+		margin-left: 8px
+
+// INPUT - UPDATE VISITS NUMBER
+.StrCPVisits-dblist-page-visits-nr
+	width: 105px
+	margin-right: 3px
+
+
+// RELOAD ICON - HIDDEN
+.StrCPVisits-dblist-reload-page-btn
+	display: none
+
+
+
+// DELETE PAGE ROW - BUTTON
+.StrCPVisits-dblist-delete-page-btn
+	// Remove underline on <a>
+	text-decoration: none
+
+	// Remove border on <a> after clicked
+	&:focus
+		box-shadow: none !important
+		outline: 1px solid transparent !important
+
+
+// DELETE PAGE ROW - ANIMATION CLASS
+.StrCPVisits_dblist_delete_page_animation
+	background-color: $db-pages-list-delete-row-background-color !important
+	margin-left: -100%
+	height: 0 !important
+	padding: 0 !important
+
+
+// SELECT ROW CLASS
+.StrCPVisits_db_list_row_select_active
+	&:before
+		opacity: 0

@@ -1,0 +1,44 @@
+// ICON MENU
+.StrCPVisits_db_select_icon_menu
+
+// ICON MENU INNER WRAPPER
+.StrCPVisits_db_select_icon_menu_inner_wrapper
+	display: flex
+	justify-content: center
+	margin: 8px 0
+
+	// ICON BUTTONS - ON SELECT
+	a
+		text-decoration: none
+		margin: 3px
+		color: $db-options-icons-menu-active-buttons-color
+
+		&:focus
+			box-shadow: 0 0 0 0 transparent !important
+			outline: none !important
+
+		.dashicons
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 42px
+			height: 30px
+
+// ICON MENU STYLE - ACTIVE - buttons
+.StrCPVisits_db_select_icon_menu_active
+	background-color: $db-options-icons-menu-active-background-color
+	border-radius: 4px
+	box-shadow: $db-options-icons-menu-active-box-shadow
+
+// ICON MENU - SPINNER
+.StrCPVisits-js-db-select-icon-menu-spinner
+	width: 20px
+	margin: 0 auto
+
+// ICON MENU - RESPONSE BOX
+.StrCPVisits_db_select_response_box
+	display: none
+	background-color: white
+	padding: 5px 10px
+	margin-bottom: 5px
+	text-align: center

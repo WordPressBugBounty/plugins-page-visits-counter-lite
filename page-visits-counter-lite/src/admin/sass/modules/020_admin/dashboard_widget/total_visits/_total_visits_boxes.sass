@@ -1,0 +1,54 @@
+/**
+ * TOTAL VISIT BOXES
+ */
+
+
+// BOXES WRAPPER
+.StrCPVisits_db_total_visits_wrapper
+	display: flex
+	justify-content: space-between
+	text-align: center
+
+
+// TOTAL PAGE VISITS BOX
+.StrCPVisits_db_total_page_visits_box
+	position: relative
+	order: 1
+	width: 50%
+	background-color: $db-box1-background-color
+	color: $db-box1-color
+	border-radius: $db-box1-border-radius
+	box-shadow: $db-box1-shadow
+
+	// SPINNER
+	.StrCPVisits-loading-spinner-wrapper-toggle
+		position: absolute
+		bottom: 8px
+		right: 8px
+
+
+// TOTAL VISITS BOX
+.StrCPVisits_db_total_visits_box
+	position: relative
+	order: 2
+	width: 50%
+	overflow: hidden
+	background-color: $db-box2-background-color
+	color: $db-box2-color
+	border-radius: $db-box2-border-radius
+	box-shadow: $db-box2-shadow
+
+	// EDIT BUTTON
+	.dashicons-edit
+		position: absolute !important
+		display: block !important
+		top: 0 !important
+		right: 0 !important
+
+
+// TOTAL VISITS - NUMBER
+.StrCPVisits_db_total_page_visits
+	display: block
+	font-size: $db-total-visit-nr-font-size
+	font-weight: $db-total-visit-nr-font-weight
+	margin-top: $db-total-visit-nr-margin-top

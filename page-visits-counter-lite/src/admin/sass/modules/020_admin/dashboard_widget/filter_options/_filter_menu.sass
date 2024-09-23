@@ -1,0 +1,57 @@
+/**
+ * FILTER MENU
+ */
+
+
+.StrCPVisits_db_filter_menu
+	margin-top: 10px
+	padding: 1px 15px
+	background-color: $db-filter-menu-background-color
+	color: $db-filter-menu-text-color
+	box-shadow: $db-menu-tabs-bottom-shadow
+
+// Header
+.StrCPVisits_db_filter_menu_header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border-bottom: 1px solid $db-filter-menu-header-border-bottom-color
+
+// Header Sentence
+.StrCPVisits_db_filter_menu_header_sentence
+	font-size: 14px
+	font-weight: $db-filter-menu-sentence-font-weight
+	letter-spacing: $db-filter-menu-sentence-letter-spacing
+
+// VISITS
+.StrCPVisits_db_filter_menu_header_visits
+	color: $db-filter-menu-header-visits-color
+	font-size: 14px
+
+// NUMBER OF VISITS
+.StrCPVisits_db_filter_menu_header_nr
+	font-weight: bold
+	letter-spacing: 1px
+
+// OPTIONS WRAPPER
+.StrCPVisits_db_filter_menu_options_wrapper
+	display: flex
+	flex-wrap: wrap
+
+	&>li
+		display: flex
+		align-items: center
+		width: 50%
+		padding: 0 8px 4px
+		box-sizing: border-box
+
+		&>label
+			font-size: 14px
+			word-break: break-all
+
+
+// INDICATOR CLASS - HIDDEN - page report in list
+.StrCPVisits_db_list_row.StrCPVisits-hidden-indicator
+	display: none
+	.StrCPVisits_db_list_page_name
+		text-decoration: line-through

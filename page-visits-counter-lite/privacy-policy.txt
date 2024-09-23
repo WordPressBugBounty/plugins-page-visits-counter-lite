@@ -1,0 +1,92 @@
+
+
+PRIVACY POLICY for "Page Visits Counter Lite" WordPress Plugin
+
+	This Privacy Policy outlines how the "Page Visits Counter Lite" WordPress plugin ("the Plugin," "we," "our," or "us") collects,
+	uses, and protects user information. By using the Plugin, you agree to the practices described in this policy.
+
+
+
+Collection and Use of Information
+
+	The plugin is designed to provide a simple and lightweight solution for counting page visits
+	on your WordPress website. It collects minimal information solely for the purpose of providing accurate page visit statistics.
+	The Plugin does not collect any personally identifiable information (PII) or sensitive data.
+
+
+
+Types of Data Collected
+
+	- Page Visits Data:
+			The Plugin counts the number of page visits on your website.
+			It distinguishes between unique visits and page refreshes.
+			It also maintains separate counters for total website visits with and without page refreshes.
+
+
+	- Hashed IP Addresses:
+			In order to differentiate between a new page visit and a page refresh,
+			the Plugin hashes the user's IP address using one-way encryption.
+			This hashed IP address is stored in the WordPress database for a duration of one hour.
+
+				Example:
+					Original IP: 192.168.1.1
+					Hashed IP: 18a409fe5cd86359fc6f4289e0324ab971e72d50eacb60cf0a170cf6f35ac31f
+
+
+	- Data Storage and Retention
+
+
+	- Page Visit Data:
+			The Plugin stores page visit data within your WordPress installation.
+			This data is not shared with any third-party companies and is not sent to external servers.
+
+
+	- Hashed IP Addresses:
+			The hashed IP addresses are stored in the WordPress database for a limited duration of one hour.
+			After this period, the hashed IP addresses are automatically purged from the database.
+
+
+
+Data Sharing
+
+	The Plugin does not share any user data, including page visit counts or hashed IP addresses,
+	with any third-party companies or services.
+
+
+
+Cookies and Cache
+
+	The Plugin does not utilize cookies or store any user data in internet browser cache memory.
+
+
+
+Security
+
+	We take the security and privacy of your data seriously. The hashed IP addresses stored in the WordPress database
+	are one-way encrypted and cannot be reverse-engineered to reveal the original IP addresses.
+	We implement reasonable measures to protect against unauthorized access, alteration, disclosure, or destruction of data.
+
+
+
+Children's Privacy
+
+	The Page Visits Counter Lite Plugin is not intended for use by children under the age of 13.
+	We do not knowingly collect any information from children under 13 years of age.
+
+
+
+Changes to this Privacy Policy
+
+	We reserve the right to modify or update this Privacy Policy at any time.
+	Changes to the policy will be included with each plugin update, and the "Last Updated" date will be adjusted accordingly.
+	The latest version of the Privacy Policy will always be available within the plugin.
+
+
+Contact Us
+
+If you have any questions, concerns, or requests regarding this Privacy Policy or the "Page Visits Counter Lite" Plugin,
+please contact us at https://strongetic.com
+
+
+
+Last Updated: 07. August 2023.

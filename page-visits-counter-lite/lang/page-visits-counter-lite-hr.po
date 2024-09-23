@@ -1,0 +1,1264 @@
+# Copyright (C) 2023 Denis Botic
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Page Visits Counter - Lite 1.1.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/strongetic-page-"
+"visits-counter-lite\n"
+"POT-Creation-Date: 2023-08-31T14:20:54+00:00\n"
+"PO-Revision-Date: 2023-08-31 17:40+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Domain: page-visits-counter-lite\n"
+
+#. Plugin Name of the plugin
+msgid "Page Visits Counter - Lite"
+msgstr "Brojač Posjeta Stranica - Lagani"
+
+#. Plugin URI of the plugin
+msgid "https://strongetic.com/free-wp-plugins/page-visits-counter-lite/"
+msgstr "https://strongetic.com/free-wp-plugins/page-visits-counter-lite/"
+
+#. Description of the plugin
+msgid ""
+"Display number of visits for each page in admin dashboard and browser "
+"developer-tool/console. Doesn't count page refresh as a new visit..."
+msgstr ""
+"Prikažite broj posjeta za svaku stranicu na administratorskoj nadzornoj "
+"ploči i u alatu / konzoli za programere preglednika. Osvježavanje stranice "
+"ne računa se kao novi posjet ..."
+
+#. Author of the plugin
+msgid "Denis Botic"
+msgstr "Denis Botić"
+
+#. Author URI of the plugin
+msgid "strongetic.com"
+msgstr "strongetic.com"
+
+#: Inc/Ajax/Counter/class-total-visits.php:81
+msgid "Error - title prop. missing!"
+msgstr "Greška - svojstvo naslova nedostaje!"
+
+#: Inc/Ajax/Counter/class-total-visits.php:112
+msgid "Logged in with a not counting user role!"
+msgstr "Ulogirani ste sa ulogom korisnika koja se ne broji!"
+
+#: Inc/Ajax/Counter/class-total-visits.php:117
+#: Inc/Ajax/Counter/class-total-visits.php:189
+msgid "Not counting this page!"
+msgstr "Ova stranica se ne broji!"
+
+#: Inc/Ajax/Counter/class-total-visits.php:176
+msgid "Error - Page data missing!"
+msgstr "Greška - Nedostaju podaci stranice!"
+
+#: Inc/Ajax/Counter/class-total-visits.php:216
+msgid "Not counting - page refreshed!"
+msgstr "Ne brojim - stranica osvježena!"
+
+#: Inc/Ajax/DashboardWidget/class-delete-page.php:80
+msgid "Error - Page name missing!"
+msgstr "Greška - ime stranice nedostaje!"
+
+#: Inc/Ajax/DashboardWidget/class-delete-page.php:90
+msgid "Page deleted!"
+msgstr "Stranica/izvješće obrisano!"
+
+#: Inc/Ajax/DashboardWidget/class-delete-page.php:92
+#: Inc/Ajax/DashboardWidget/class-delete-pages.php:102
+#: Inc/Ajax/DashboardWidget/class-toggle-hidden-reports.php:124
+msgid "There was an error!"
+msgstr "Došlo je do Greške!"
+
+#: Inc/Ajax/DashboardWidget/class-delete-pages.php:66
+#: Inc/Ajax/DashboardWidget/class-toggle-hidden-reports.php:66
+#: Inc/Ajax/DashboardWidget/class-toggle-hidden-reports.php:97
+#: Inc/Ajax/DashboardWidget/reset/class-reset-all.php:76
+#: Inc/Ajax/DashboardWidget/reset/class-reset-page-type.php:68
+msgid "Error - data not set!"
+msgstr "Greška - podaci nisu postavljeni!"
+
+#: Inc/Ajax/DashboardWidget/class-delete-pages.php:71
+#: Inc/Ajax/DashboardWidget/class-toggle-hidden-reports.php:71
+#: Inc/Ajax/DashboardWidget/reset/class-reset-page-type.php:73
+msgid "Error - not array!"
+msgstr "Greška - nije (array) niz!"
+
+#: Inc/Ajax/DashboardWidget/class-delete-pages.php:100
+msgid "Pages deleted!"
+msgstr "Izvjštaji obrisani!"
+
+#: Inc/Ajax/DashboardWidget/class-toggle-hidden-reports.php:114
+msgid "Error - not expected value!"
+msgstr "Greška - neočekivana vrijednost!"
+
+#: Inc/Ajax/DashboardWidget/class-toggle-hidden-reports.php:122
+msgid "Success!"
+msgstr "Uspjeh!"
+
+#: Inc/Ajax/DashboardWidget/class-update-page-data.php:81
+#: Inc/Ajax/DashboardWidget/class-update-total-visits-nr.php:73
+msgid "Error - number too big!"
+msgstr "Greška - broj je prevelik!"
+
+#: Inc/Ajax/DashboardWidget/class-update-page-data.php:85
+#: Inc/Ajax/DashboardWidget/class-update-total-visits-nr.php:77
+msgid "Error - not a number!"
+msgstr "Greška - nije broj!"
+
+#: Inc/Ajax/DashboardWidget/class-update-page-data.php:89
+#: Inc/Ajax/DashboardWidget/class-update-total-visits-nr.php:81
+msgid "Error - no data set!"
+msgstr "Greška - nema postavljenih podataka!"
+
+#: Inc/Ajax/DashboardWidget/class-update-page-data.php:103
+msgid "Page name missing!"
+msgstr "Nedostaje ime stranice!"
+
+#: Inc/Ajax/DashboardWidget/class-update-page-data.php:112
+#: Inc/Ajax/DashboardWidget/class-update-total-visits-nr.php:91
+#: Inc/Ajax/DashboardWidget/reset/class-reset-all.php:88
+#: Inc/Ajax/DashboardWidget/reset/class-reset-page-type.php:101
+msgid "Changes saved!"
+msgstr "Izmjene spremljene!"
+
+#: Inc/Ajax/DashboardWidget/class-update-page-data.php:114
+#: Inc/Ajax/DashboardWidget/class-update-total-visits-nr.php:93
+#: Inc/Ajax/DashboardWidget/reset/class-reset-page-type.php:103
+#: Inc/Ajax/SettingsPage/class-save-settings.php:107
+msgid "No changes to save..."
+msgstr "Nema izmjena..."
+
+#: Inc/Ajax/DashboardWidget/reset/class-reset-all.php:72
+msgid "Reset all error!"
+msgstr "Reset all (sve) greška!"
+
+#: Inc/Ajax/SettingsPage/class-save-settings.php:102
+msgid "Changes saved successfully!"
+msgstr "Promjene su uspješno spremljene!"
+
+#: Inc/Base/class-enqueue.php:63
+msgid "PAGE NAME"
+msgstr "NAZIV STRANICE"
+
+#: Inc/Base/class-enqueue.php:64
+msgid "Cannot access page name - try to flush server cache..."
+msgstr ""
+"Ne mogu pristupiti nazivu stranice - pokušajte izbrisati predmemoriju "
+"servera/hostinga ..."
+
+#: Inc/Base/class-enqueue.php:65
+msgid "MESSAGE"
+msgstr "PORUKA"
+
+#: Inc/Base/class-enqueue.php:66
+msgid "TOTAL PAGE VISITS"
+msgstr "UKUPNI POSJETI STRANICE"
+
+#: Inc/Base/class-enqueue.php:67
+msgid "TOTAL WEBSITE VISITS"
+msgstr "UKUPNI POSJETI WEB STRANICE"
+
+#: Inc/Base/class-enqueue.php:135
+msgid ""
+"On plugin delete, all plugin data are going to be deleted. If you wish to "
+"keep the data, enable that option in the plugin settings."
+msgstr ""
+"Pri brisanju dodatka izbrisat će se svi podaci dodatka. Ako želite zadržati "
+"podatke, omogućite tu opciju u postavkama dodatka."
+
+#: Inc/Base/class-enqueue.php:146
+msgid "Delete a page-report from VISITS BY PAGE-NAME list?"
+msgstr "Izbrisati izvještaj o stranici sa popisa VISITS BY PAGE-NAME?"
+
+#: Inc/Base/class-enqueue.php:147
+msgid "Move selected reports to visible list?"
+msgstr "Premjestiti odabrana izvješća na vidljivi popis?"
+
+#: Inc/Base/class-enqueue.php:148
+msgid "Move selected reports to hidden list?"
+msgstr "Premjestiti odabrana izvješća na skriveni popis?"
+
+#: Inc/Base/class-enqueue.php:149
+msgid "Reset selected reports to zero?"
+msgstr "Vratiti odabrana izvješća na nulu?"
+
+#: Inc/Base/class-enqueue.php:150
+msgid "Delete selected page-reports from VISITS BY PAGE-NAME list?"
+msgstr ""
+"Izbrisati odabrane izvještaje sa stranice s popisa VISITS BY PAGE-NAME?"
+
+#: Inc/Base/class-enqueue.php:151
+msgid ""
+"By switching to the Visible list type, all current selections are going to "
+"be lost. Do you wish to proceed?"
+msgstr ""
+"Prebacivanjem na vrstu vidljivog popisa izgubit će se svi trenutni odabiri. "
+"Želite li nastaviti?"
+
+#: Inc/Base/class-enqueue.php:152
+msgid ""
+"By switching to the Hidden list type, all current selections are going to be "
+"lost. Do you wish to proceed?"
+msgstr ""
+"Prebacivanjem na skrivenu (Hidden) vrstu liste, svi trenutni odabiri će biti "
+"izgubljeni. Želite li nastaviti?"
+
+#: templates/settings-subpage.php:32
+msgid "Page Visits Counter Lite - Settings"
+msgstr "Lagani Brojač posjeta stranica - Postavke  "
+
+#: templates/settings-subpage.php:39
+msgid "Settings"
+msgstr "Postavke"
+
+#: templates/settings-subpage.php:40
+msgid "Counter"
+msgstr "Brojač"
+
+#: templates/settings-subpage.php:41
+msgid "Documentation"
+msgstr "Dokumentacija"
+
+#: templates/settings-subpage.php:42
+msgid "Screenshot"
+msgstr "Snimke zaslona"
+
+#: templates/settings-subpage.php:43
+msgid "Installation"
+msgstr "Instalacija"
+
+#: templates/settings-subpage.php:44
+msgid "Debugging"
+msgstr "Debagiranje"
+
+#: templates/settings-subpage.php:45
+msgid "FAQ"
+msgstr "ČPP"
+
+#: templates/settings-subpage.php:46
+msgid "About"
+msgstr "Informacije"
+
+#: templates/template-parts/about-tab.php:26
+msgid "ABOUT PLUGIN"
+msgstr "O DODATKU"
+
+#: templates/template-parts/about-tab.php:27
+msgid ""
+"The purpose of this plugin is to supplement the report of actual visits to "
+"the pages of the website that cannot be recorded through advanced analytical "
+"tools. Advanced analytical tools require the consent of a visitor before the "
+"visit is recorded."
+msgstr ""
+"Svrha ovog dodatka je dopuniti izvještaj o stvarnim posjetama web-stranica "
+"koje se ne mogu evidentirati pomoću naprednih analitičkih alata. Napredni "
+"analitički alati zahtijevaju pristanak posjetitelja prije nego što se posjet "
+"zabilježi."
+
+#: templates/template-parts/about-tab.php:31
+msgid "WORD OF THE AUTHOR"
+msgstr "RIJEČ AUTORA"
+
+#: templates/template-parts/about-tab.php:32
+msgid ""
+"My name is Denis Botic and I've created this plugin because I couldn't find "
+"such a solution among existing plugins. The main goal was to keep it "
+"extremely lite, count each page visit and report about it. Later I've "
+"figured that I am not interested in counting page reloads."
+msgstr ""
+"Zovem se Denis Botić i napravio sam ovaj dodatak iz razloga što nisam mogao "
+"pronaći takvo riješenje među postojećim dodacima. Glavni cilj bio je "
+"zadržati dodatak laganim, te brojati svaki posjet stranice i izvještavati o "
+"tome. Naknadno sam zaključio da me ne zanima brojanje osvježenja stranice."
+
+#: templates/template-parts/about-tab.php:33
+msgid "Visit the author page"
+msgstr "Posjeti autorovu stranicu"
+
+#: templates/template-parts/counter-tab.php:55
+msgid "DISPLAY COUNTER - on the website"
+msgstr "PRIKAZ BROJAČA - na web mjestu"
+
+#: templates/template-parts/counter-tab.php:56
+msgid ""
+"If you wish to display a visits-counter on your website, copy the counter "
+"code and paste it into \"HTML widget\" or \"page custom HTML block\". (Not "
+"code block!)"
+msgstr ""
+"Ako želite prikazati brojač posjeta na svom web mjestu, kopirajte kod "
+"brojača i zalijepite ga u \"HTML widget\" ili \"page custom HTML block\". "
+"(Ne koristite \"code block\"!)"
+
+#: templates/template-parts/counter-tab.php:62
+msgid "INFO"
+msgstr "INFO"
+
+#: templates/template-parts/counter-tab.php:63
+msgid "About counter N/A status:"
+msgstr "O statusu N/A za brojač:"
+
+#: templates/template-parts/counter-tab.php:65
+#: templates/template-parts/faq-tab.php:107
+msgid "N/A stands for \"Not Available\""
+msgstr "N/A označava \"Nije dostupno\" ( Not Available )"
+
+#: templates/template-parts/counter-tab.php:66
+#: templates/template-parts/faq-tab.php:108
+msgid ""
+"N/A is a default counter status - counter does not start from zero - zero is "
+"set on reset"
+msgstr ""
+"N/A je zadani status brojača - brojač ne počinje od nule - nula se postavlja "
+"prilikom resetiranja"
+
+#: templates/template-parts/counter-tab.php:68
+#: templates/template-parts/faq-tab.php:110
+msgid "A not-counting page is going to display N/A."
+msgstr "Stranica koja se ne broji će prikazivati N/A."
+
+#: templates/template-parts/counter-tab.php:69
+#: templates/template-parts/faq-tab.php:111
+msgid ""
+"Also, any other page is going to display N/A until it is visited by either: "
+msgstr "Također, svaka druga stranica će prikazivati N/A dok je ne posjeti: "
+
+#: templates/template-parts/counter-tab.php:71
+#: templates/template-parts/faq-tab.php:113
+msgid "signed-out user"
+msgstr "korisnik koji nije prijavljen"
+
+#: templates/template-parts/counter-tab.php:72
+#: templates/template-parts/faq-tab.php:114
+msgid "signed-in user with a counting user role"
+msgstr "prijavljeni korisnik s ulogom koja omogućuje brojanje"
+
+#: templates/template-parts/counter-tab.php:74
+#: templates/template-parts/faq-tab.php:116
+msgid ""
+"For more info about \"Counting\" and \"Not Counting\" read in the plugin "
+"documentation."
+msgstr ""
+"Za više informacija o \"Brojanju\" i \"Ne Brojanju\", pročitajte u "
+"dokumentaciji dodatka."
+
+#: templates/template-parts/counter-tab.php:81
+msgid "WARNING"
+msgstr "UPOZORENJE"
+
+#: templates/template-parts/counter-tab.php:82
+msgid ""
+"If you are placing the code into dynamic website element like header, footer "
+"or sidebar then you can add only one page-visits-counter and one website-"
+"visits-counter on your website."
+msgstr ""
+"Ako postavljate kod u dinamični element web stranice kao što su zaglavlje "
+"(header), podnožje (footer) ili bočna traka (sidebar), tada možete dodati "
+"samo jedan brojač posjeta stranici (page-visits-counter) i jedan brojač "
+"posjeta web-stranice (website-visits-counter) na svojoj web-stranici."
+
+#: templates/template-parts/counter-tab.php:83
+msgid ""
+"( A dynamic element is an element displayed across the web pages of your "
+"website. )"
+msgstr ""
+"( Dinamički element je element prikazan na svim web stranicama vaše web "
+"stranice. )"
+
+#: templates/template-parts/counter-tab.php:84
+msgid ""
+"If you wish to place it on a static page then each page can have only one "
+"page-visits-counter and one website-visits-counter."
+msgstr ""
+"Ako brojač želite postaviti na stranicu, onda svaka stranica može imati samo "
+"jedan brojač posjeta stranici i jedan brojač posjeta web-stranici."
+
+#: templates/template-parts/counter-tab.php:90
+msgid "VIDEO EXPLANATION"
+msgstr "VIDEO OBJAŠNJENJE"
+
+#: templates/template-parts/counter-tab.php:99
+msgid "Page Visits Counter - code samples"
+msgstr "Page Visits Counter - primjeri koda"
+
+#: templates/template-parts/counter-tab.php:102
+msgid ""
+"It will display the number of total visits for the currently loaded page."
+msgstr "Prikazat će broj ukupnih posjeta za trenutno učitanu stranicu."
+
+#: templates/template-parts/counter-tab.php:103
+msgid "It does not count page refresh as a new visit."
+msgstr "Ne broji osvježavanje stranice kao novu posjetu."
+
+#: templates/template-parts/counter-tab.php:108
+#: templates/template-parts/counter-tab.php:200
+msgid "Set counter position in parent element"
+msgstr "Postavi položaj brojača u nadređenom elementu"
+
+#: templates/template-parts/counter-tab.php:110
+#: templates/template-parts/counter-tab.php:202
+msgid "Left"
+msgstr "Lijevo"
+
+#: templates/template-parts/counter-tab.php:111
+#: templates/template-parts/counter-tab.php:203
+msgid "Center"
+msgstr "Centar"
+
+#: templates/template-parts/counter-tab.php:112
+#: templates/template-parts/counter-tab.php:204
+msgid "Right"
+msgstr "Desno"
+
+#: templates/template-parts/counter-tab.php:121
+#: templates/template-parts/counter-tab.php:213
+msgid "BASE - counter"
+msgstr "BAZA - brojač"
+
+#: templates/template-parts/counter-tab.php:125
+#: templates/template-parts/counter-tab.php:217
+msgid "Position is always LEFT"
+msgstr "Položaj je uvijek LIJEVO"
+
+#: templates/template-parts/counter-tab.php:136
+#: templates/template-parts/counter-tab.php:228
+msgid "BASE and POSITION - counter"
+msgstr "BAZA i POZICIJA - brojač"
+
+#: templates/template-parts/counter-tab.php:151
+#: templates/template-parts/counter-tab.php:243
+msgid "LIGHT - counter"
+msgstr "Svijetli - brojač"
+
+#: templates/template-parts/counter-tab.php:167
+#: templates/template-parts/counter-tab.php:259
+msgid "DARK - counter"
+msgstr "Tamni - brojač"
+
+#: templates/template-parts/counter-tab.php:191
+msgid "Website Visits Counter - code samples"
+msgstr "Website Visits Counter - Primjeri koda"
+
+#: templates/template-parts/counter-tab.php:194
+msgid "It will display the sum of total visits for all website pages."
+msgstr "Prikazat će ukupan broj posjeta za sve stranice web mjesta."
+
+#: templates/template-parts/counter-tab.php:195
+msgid "It counts page refresh."
+msgstr "Broji osvježenja stranice."
+
+#: templates/template-parts/debugging-tab.php:31
+msgid "DEBUGGING"
+msgstr "OTKLANJANJE POGREŠAKA"
+
+#: templates/template-parts/debugging-tab.php:32
+msgid ""
+"If you have followed all installation instructions and there are still "
+"issues with getting the plugin to work, you can try to debug it."
+msgstr ""
+"Ako ste slijedili sve upute za instalaciju i još uvijek postoje problemi s "
+"radom dodatka, možete pokušati otkloniti pogreške."
+
+#: templates/template-parts/debugging-tab.php:33
+msgid "Follow the steps!"
+msgstr "Slijedite korake!"
+
+#: templates/template-parts/debugging-tab.php:36
+msgid "OPEN DEBUGGER TOOLS"
+msgstr "OTVORITI DEBUGGER ALATE"
+
+#: templates/template-parts/debugging-tab.php:38
+msgid "Use Google Chrome or Mozilla Firefox as a web browser."
+msgstr "Koristite Google Chrome ili Mozilla Firefox kao web preglednik."
+
+#: templates/template-parts/debugging-tab.php:39
+msgid "Visit the home page of your website ( Either logged in or logged out. )"
+msgstr ""
+"Posjetite početnu stranicu vaše webstranice. (Prijavljeni ili odjavljeni.)"
+
+#: templates/template-parts/debugging-tab.php:40
+msgid ""
+"Press the F12 keyboard button to open the browser Dev Tools. ( Or google for "
+"the tutorials on how to open Dev Tools in Chrome or Mozilla. )"
+msgstr ""
+"Pritisnite gumb tipkovnice F12 da biste otvorili alate za razvoj "
+"preglednika. (Ili na Googleu potražite upute o tome kako otvoriti Dev Tools "
+"u Chrome-u ili Mozilli.)"
+
+#: templates/template-parts/debugging-tab.php:41
+msgid ""
+"In the Dev Tools tab at the top, you will see menu options like in the image "
+"below this text. Click on the option called Console. "
+msgstr ""
+"U Dev Tools na vrhu vidjet ćete opcije izbornika kao na slici ispod ovog "
+"teksta. Kliknite opciju pod nazivom Console."
+
+#: templates/template-parts/debugging-tab.php:46
+msgid "DEBUG ISSUES"
+msgstr "OTKLANJANJE GREŠAKA"
+
+#: templates/template-parts/debugging-tab.php:47
+msgid "NO TEXT"
+msgstr "NEMA TEKSTA"
+
+#: templates/template-parts/debugging-tab.php:48
+msgid ""
+"If you do not see the text as on the image in your console tab, even if you "
+"scroll it up or down, it means that your Javascript files are still cashed."
+msgstr ""
+"Ako u kartici console ne vidite tekst kao na slici, čak i ako ga pomičete "
+"prema gore ili dolje, to znači da su vaše Javascript datoteke i dalje "
+"predmemorirane."
+
+#: templates/template-parts/debugging-tab.php:49
+#: templates/template-parts/debugging-tab.php:62
+msgid "FIX"
+msgstr "POPRAVAK"
+
+#: templates/template-parts/debugging-tab.php:51
+msgid ""
+"You should flush the cache and delete minified JS and CSS files from your WP "
+"cache and automatic optimization plugins."
+msgstr ""
+"Trebali biste isprazniti predmemoriju i izbrisati minificirane JS i CSS "
+"datoteke iz svoje WP predmemorije i dodataka za automatsku optimizaciju."
+
+#: templates/template-parts/debugging-tab.php:52
+msgid ""
+"Check if there is cache turned on with your hosting or server and flush it."
+msgstr ""
+"Provjerite je li na vašem hostingu ili serveru uključena predmemorija i "
+"izbrišite je."
+
+#: templates/template-parts/debugging-tab.php:53
+msgid ""
+"If you are using the Cloud technology, flush cache memory and delete "
+"minified JS and CSS files."
+msgstr ""
+"Ako koristite tehnologiju Cloud, ispraznite predmemoriju i izbrišite "
+"minificirane JS i CSS datoteke."
+
+#: templates/template-parts/debugging-tab.php:57
+msgid "PHP STATUS: FALSE"
+msgstr "PHP STATUS: FALSE"
+
+#: templates/template-parts/debugging-tab.php:59
+msgid ""
+"If you see the text, then both sentences JS status and PHP status should "
+"have the status OK. (As on the image below.)"
+msgstr ""
+"Ako vidite tekst, tada bi i JS status i PHP status trebali imati status OK. "
+"(Kao na donjoj slici.)"
+
+#: templates/template-parts/debugging-tab.php:60
+msgid ""
+"If JS status is OK and PHP status is FALSE, it means that your PHP code is "
+"still cashed. It is probably cached on your hosting/server."
+msgstr ""
+"Ako je JS status OK, a PHP FALSE, to znači da je vaš PHP kôd i dalje "
+"predmemoriran. Vjerojatno je predmemoriran na vašem hostingu / serveru."
+
+#: templates/template-parts/debugging-tab.php:63
+msgid ""
+"You should log in to your hosting account and flush the cache memory. If you "
+"don't know how to do it on your own, you can google for instructions on how "
+"to do it or contact the hosting support and ask them to do it for you."
+msgstr ""
+"Trebali biste se prijaviti na svoj račun hostinga i isprazniti predmemoriju. "
+"Ako ne znate kako to učiniti sami, potražite upute kako to učiniti ili "
+"zatražite od podrške hostinga da to učine umjesto vas."
+
+#: templates/template-parts/debugging-tab.php:66
+msgid ""
+"On the image above you can find out how many visits a page had - without "
+"counting page reload/refresh."
+msgstr ""
+"Na gornjoj slici možete saznati koliko je posjeta stranica imala - bez "
+"brojanja osvježavanja stranice."
+
+#: templates/template-parts/debugging-tab.php:71
+msgid "INFO MESSAGES"
+msgstr "INFO PORUKE"
+
+#: templates/template-parts/debugging-tab.php:72
+msgid "After you get JS and PHP status messages to show OK, you are done."
+msgstr ""
+"Nakon što dobijete poruke o statusu JS i PHP da prikažu OK, završili ste "
+"instalaciju."
+
+#: templates/template-parts/debugging-tab.php:73
+msgid "The plugin should work properly."
+msgstr "Dodatak bi trebao ispravno raditi."
+
+#: templates/template-parts/debugging-tab.php:75
+msgid ""
+"As you can see, there are other messages in the console tab that can come in "
+"handy while browsing the website frontend pages."
+msgstr ""
+"Kao što vidite, u kartici console postoje i druge poruke koje vam mogu dobro "
+"doći tijekom pregledavanja frontend stranica."
+
+#: templates/template-parts/debugging-tab.php:76
+msgid ""
+"If you wish to quickly find out how many visits a current page has "
+"collected, you can just open the Dev Tool and select the console tab. There "
+"you should see the text like on one of the images below this text."
+msgstr ""
+"Ako želite brzo saznati koliko je posjeta trenutna stranica prikupila, "
+"jednostavno otvorite Dev Tool i odaberite karticu console. Tamo biste "
+"trebali vidjeti tekst kao na jednoj od slika ispod ovog teksta."
+
+#: templates/template-parts/debugging-tab.php:78
+msgid ""
+"You can find out the official page name that later you can search for in the "
+"admin dashboard to update."
+msgstr ""
+"Možete saznati službeno ime stranice koje ćete kasnije potražiti u widgetu "
+"na administratorskoj nadzornoj ploči pa možete ažurirati istu."
+
+#: templates/template-parts/debugging-tab.php:79
+msgid ""
+"If you are visiting the page or a page type that is not going to be counted, "
+"you will be notified about that."
+msgstr ""
+"Ako posjetite stranicu ili vrstu stranice koja se neće brojati, o tome ćete "
+"biti obaviješteni."
+
+#: templates/template-parts/debugging-tab.php:84
+msgid ""
+"If you refresh the page, you will get the page visits ( unchanged ) number "
+"and the message."
+msgstr ""
+"Ako osvježite stranicu, dobit ćete broj posjeta stranici (nepromijenjen) i "
+"poruku."
+
+#: templates/template-parts/debugging-tab.php:85
+msgid ""
+"The message is going to tell you that the page is refreshed, and it is not "
+"going to count as a visit."
+msgstr ""
+"Poruka će vam reći da je stranica osvježena i neće se računati kao posjet."
+
+#: templates/template-parts/debugging-tab.php:90
+msgid ""
+"If you are logged in with a user role that is not going to count a page "
+"visit, you will be notified about that as well."
+msgstr ""
+"Ako ste prijavljeni s korisničkom ulogom koja neće brojati posjet stranici, "
+"bit ćete i o tome obaviješteni."
+
+#: templates/template-parts/documentation-tab.php:21
+msgid ""
+"This plugin is going to display the number of visits for each page in the:"
+msgstr "Ovaj dodatak će prikazivati broj posjeta za svaku stranicu u:"
+
+#: templates/template-parts/documentation-tab.php:23
+msgid "Admin dashboard"
+msgstr "Administratorska nadzorna ploča"
+
+#: templates/template-parts/documentation-tab.php:24
+msgid "Browser developer-tools/console tab - ( HIDDEN COUNTERS )"
+msgstr "Alat za razvoj preglednika/konzolna kartica - ( SKRIVENI BROJAČI )"
+
+#: templates/template-parts/documentation-tab.php:25
+msgid "Website/page frontend - ( OPTIONAL )"
+msgstr "Web-stranica/stranica - ( OPICIONALNO )"
+
+#: templates/template-parts/documentation-tab.php:32
+msgid "WHY LITE?"
+msgstr "ZAŠTO LAGANI?"
+
+#: templates/template-parts/documentation-tab.php:35
+msgid "It is a small size software and it does not require much memory."
+msgstr "To je mala softverska aplikacija i ne zahtijeva puno memorije."
+
+#: templates/template-parts/documentation-tab.php:36
+msgid ""
+"It is not going to crowd your database with tons of metric data and \"eat\" "
+"the database memory."
+msgstr ""
+"Neće zagušiti vašu bazu podataka s velikom količinom metričkih podataka i "
+"\"trošiti\" memoriju baze podataka."
+
+#: templates/template-parts/documentation-tab.php:37
+msgid "It is not going to collect users' personal data - GDPR compliant."
+msgstr "Neće prikupljati osobne podatke korisnika - u skladu s GDPR-om."
+
+#: templates/template-parts/documentation-tab.php:43
+msgid "NOT COUNTING"
+msgstr "NE BROJI"
+
+#: templates/template-parts/documentation-tab.php:46
+#: templates/template-parts/documentation-tab.php:69
+msgid "Logged in user with a role:"
+msgstr "Ulogirani korisnik s ulogom:"
+
+#: templates/template-parts/documentation-tab.php:48
+msgid "admin"
+msgstr "administrator"
+
+#: templates/template-parts/documentation-tab.php:49
+msgid "editor"
+msgstr "urednik"
+
+#: templates/template-parts/documentation-tab.php:50
+msgid "shop manager"
+msgstr "upravitelj trgovine"
+
+#: templates/template-parts/documentation-tab.php:51
+msgid "custom role"
+msgstr "prilagođena uloga"
+
+#: templates/template-parts/documentation-tab.php:53
+msgid ""
+"Page refresh/reload   ( But \"Total Visits\" load&reload sum will count it. )"
+msgstr ""
+"Osvježavanje/ponovno učitavanje stranice ( Ali \"Total Visits\" učitavanje/"
+"osvježavanje će pribrojiti sumi. )"
+
+#: templates/template-parts/documentation-tab.php:54
+msgid ""
+"Submitting comments  ( But \"Total Visits\" load&reload sum will count it. )"
+msgstr ""
+"Slanje komentara ( Ali \"Total Visits\" učitavanje/osvježavanje će "
+"pribrojiti sumi. )"
+
+#: templates/template-parts/documentation-tab.php:55
+msgid "Visiting direct media link in the uploads folder"
+msgstr "Posjet direktne medij veze datoteke u \"uploads\" mapi"
+
+#: templates/template-parts/documentation-tab.php:56
+msgid "Media - attachment page"
+msgstr "Medij - privitak stranice"
+
+#: templates/template-parts/documentation-tab.php:57
+msgid "Search results page"
+msgstr "Stranica rezultata pretrage"
+
+#: templates/template-parts/documentation-tab.php:58
+msgid "Update cart ( But \"Total Visits\" load&reload sum will count it. )"
+msgstr ""
+"Ažuriraj košaricu ( Ali \"Total Vistis\" učitavanje/osvježavanje će "
+"pribrojiti sumi. )"
+
+#: templates/template-parts/documentation-tab.php:59
+msgid ""
+"Checkout/order received  ( But \"Total Visits\" load&reload sum will count "
+"it. )"
+msgstr ""
+"Naplata/narudžba zaprimljena ( Ali \"Total Visits\" učitavanje/osvježavanje "
+"će pribrojiti sumi. )"
+
+#: templates/template-parts/documentation-tab.php:65
+msgid "COUNTING"
+msgstr "BROJANJE"
+
+#: templates/template-parts/documentation-tab.php:68
+msgid "A visitor  ( Not logged in )"
+msgstr "Posjetitelj (Neprijavljen)"
+
+#: templates/template-parts/documentation-tab.php:71
+msgid "Subscriber"
+msgstr "Pretplatnik"
+
+#: templates/template-parts/documentation-tab.php:72
+msgid "Author"
+msgstr "Autor"
+
+#: templates/template-parts/documentation-tab.php:73
+msgid "Contributor"
+msgstr "Suradnik"
+
+#: templates/template-parts/documentation-tab.php:74
+msgid "Pending_user"
+msgstr "Korisnik_na_čekanju"
+
+#: templates/template-parts/documentation-tab.php:75
+msgid "Customer"
+msgstr "Klijent"
+
+#: templates/template-parts/documentation-tab.php:77
+msgid "Pages and posts:"
+msgstr "Stranice i objave"
+
+#: templates/template-parts/documentation-tab.php:79
+msgid "Pages and subpages"
+msgstr "Stranice i podstranice"
+
+#: templates/template-parts/documentation-tab.php:80
+msgid "Default and Static Homepage"
+msgstr "Zadana i statička početna stranica"
+
+#: templates/template-parts/documentation-tab.php:81
+msgid "Blog Posts page"
+msgstr "Stranica s blogovima"
+
+#: templates/template-parts/documentation-tab.php:82
+msgid "Single post"
+msgstr "Pojedinačne objave"
+
+#: templates/template-parts/documentation-tab.php:83
+#: templates/template-parts/documentation-tab.php:91
+msgid "Default category and tag - archive pages"
+msgstr "Zadane kategorije i oznake - arhivske stranice"
+
+#: templates/template-parts/documentation-tab.php:84
+msgid "404"
+msgstr "404"
+
+#: templates/template-parts/documentation-tab.php:85
+msgid "CPT"
+msgstr "CPT"
+
+#: templates/template-parts/documentation-tab.php:86
+msgid "Taxonomy archive pages"
+msgstr "Stranice arhive taksonomija"
+
+#: templates/template-parts/documentation-tab.php:87
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: templates/template-parts/documentation-tab.php:89
+msgid "SHOP - archive page"
+msgstr "SHOP - arhivska stranica"
+
+#: templates/template-parts/documentation-tab.php:90
+msgid "Single product"
+msgstr "Pojedinačni proizvod"
+
+#: templates/template-parts/documentation-tab.php:92
+msgid "Attribute archive pages"
+msgstr "Atribut stranica arhive"
+
+#: templates/template-parts/documentation-tab.php:93
+msgid "Cart   ( Check Update cart is not counting... )"
+msgstr "Košarica (provjeri Ažuriraj košaricu se ne računa ...)"
+
+#: templates/template-parts/documentation-tab.php:94
+msgid "Checkout  ( Check \"Checkout/order received\" is not counting...)"
+msgstr "Plaćanje (Oznaka \"Plaćanje / primljena narudžba\" se ne računa ...)"
+
+#: templates/template-parts/documentation-tab.php:102
+msgid "ON CHANGE NAME of Page, Post, Product..."
+msgstr "NA PROMIJENU IMENA stranice, objave, proizvoda ..."
+
+#: templates/template-parts/documentation-tab.php:105
+msgid ""
+"If you change the name of an existing page, post, product, archive, etc. "
+"then the old page will remain intact in the page visits report."
+msgstr ""
+"Ako promijenite naziv postojeće stranice, objave, proizvoda, arhive itd., "
+"Tada će stara stranica ostati netaknuta u izvješću o posjetima stranici."
+
+#: templates/template-parts/documentation-tab.php:107
+msgid ""
+"After a new visit, the new page name will appear in the page visits report "
+"and the counter will start counting visits for the new page from the start."
+msgstr ""
+"Nakon novog posjeta, novo će se ime stranice pojaviti u izvješću o posjetima "
+"stranici, a brojač će od početka početi brojati posjete za novu stranicu."
+
+#: templates/template-parts/documentation-tab.php:113
+msgid "ON DELETE of Page, Post, Product..."
+msgstr "PRILIKOM BRISANJA stranice, objave, proizvoda ..."
+
+#: templates/template-parts/documentation-tab.php:115
+msgid ""
+"If you delete an existing page, post, product, archive, etc. then the page "
+"will remain intact in the page visits report including its number of visits."
+msgstr ""
+"Ako izbrišete postojeću stranicu, post, proizvod, arhivu i tako dalje, tada "
+"će stranica ostati netaknuta u izvješću o posjetima stranici, uključujući "
+"njezin broj posjeta."
+
+#: templates/template-parts/documentation-tab.php:120
+msgid "VISITS-COUNTER ON THE WEBSITE FRONTEND"
+msgstr "BROJAČ POSJETA NA FRONTALNOM DIJELOVIMA WEB STRANICE"
+
+#: templates/template-parts/documentation-tab.php:122
+msgid "There are two counter types:"
+msgstr "Postoje dva tipa brojača:"
+
+#: templates/template-parts/documentation-tab.php:124
+msgid "Website counter"
+msgstr "Brojač web stranice"
+
+#: templates/template-parts/documentation-tab.php:125
+msgid "Page counter ( Not counting page refresh. )"
+msgstr "Brojač stranica (Ne broji osvježavanja stranice.)"
+
+#: templates/template-parts/documentation-tab.php:127
+msgid "You can add one or both counter types on your website or page frontend."
+msgstr ""
+"Možete dodati jedan ili oba tipa brojača na prednji dio vaše web-stranice "
+"ili pojedinačne stranice."
+
+#: templates/template-parts/documentation-tab.php:128
+msgid ""
+"Instructions on how to add counter/s to your website are in the plugin "
+"settings page under the tab named counter."
+msgstr ""
+"Upute o tome kako dodati brojač(e) na vašu web stranicu nalaze se na "
+"stranici postavki dodatka pod karticom naziva \"Brojač\"."
+
+#: templates/template-parts/documentation-tab.php:133
+msgid "FEATURES"
+msgstr "ZNAČAJKE"
+
+#: templates/template-parts/documentation-tab.php:136
+msgid "Lite software"
+msgstr "Lagani (Lite) softver"
+
+#: templates/template-parts/documentation-tab.php:137
+msgid "WooCommerce compatible"
+msgstr "Kompatibilan s WooCommerce dodatkom"
+
+#: templates/template-parts/documentation-tab.php:138
+msgid "GDPR Compliant"
+msgstr "Usklađen s GDPR-om"
+
+#: templates/template-parts/documentation-tab.php:144
+msgid "REQUIREMENTS"
+msgstr "ZAHTJEVI / USLOVI"
+
+#: templates/template-parts/documentation-tab.php:154
+msgid "FOR DEVELOPER"
+msgstr "ZA DEVELOPERA"
+
+#: templates/template-parts/documentation-tab.php:156
+msgid "Admin dashboard widget has four wp-hooks:"
+msgstr "Widget u nadzornoj ploči administratora ima četiri wp-hooks:"
+
+#: templates/template-parts/faq-tab.php:23
+msgid "Frequently asked questions"
+msgstr "Često postavljena pitanja"
+
+#: templates/template-parts/faq-tab.php:29
+msgid "Where I can find the page visits report as seen on the screenshot?"
+msgstr ""
+"Gdje se nalazi \"page visits report\" kao što je prikazan na snimci zaslona?"
+
+#: templates/template-parts/faq-tab.php:31
+msgid ""
+"Select the \"Dashboard\" option from the WordPress admin menu and there you "
+"should find a widget called \"ALL PAGE VISITS.\""
+msgstr ""
+"Odaberite opciju \"Nadzorna ploča\" u WordPress administratorskom izborniku "
+"i tamo bi trebali naći widget zvan \"ALL PAGE VISITS.\""
+
+#: templates/template-parts/faq-tab.php:32
+msgid ""
+"If it is not expanded, just click on the title and you should be able to see "
+"it."
+msgstr ""
+"Ukoliko nije otvoren, samo kliknite na naslov i tada bi ste ga trebali moći "
+"vidjeti."
+
+#: templates/template-parts/faq-tab.php:38
+msgid "Where I can find the plugin settings page?"
+msgstr "Gdje se nalazi stranica postavke dodatka? "
+
+#: templates/template-parts/faq-tab.php:40
+msgid "You will find it under the settings option in the WordPress admin menu."
+msgstr ""
+"Pronaći će te stranicu pod opcijom \"Postavke\" u WordPress "
+"administratorskom izborniku."
+
+#: templates/template-parts/faq-tab.php:41
+msgid "It is called \"Page Visits Counter Lite\"."
+msgstr "Nazvana je \"Page Visits Counter Lite\"."
+
+#: templates/template-parts/faq-tab.php:47
+msgid "Is it going to count the sum of all page visits?"
+msgstr "Hoće li brojati sumu svih posjeta stranicama?"
+
+#: templates/template-parts/faq-tab.php:49
+msgid "Yes, there are two TOTAL VISITS boxes."
+msgstr "Da, postoje dva TOTAL VISITS kvadratića."
+
+#: templates/template-parts/faq-tab.php:50
+msgid ""
+"The first one is going to sum all page visits without counting a page "
+"refresh/reload."
+msgstr ""
+"Prvi će zbrojiti posjete svih stranica ne uključujući osvježenje stranice."
+
+#: templates/template-parts/faq-tab.php:51
+msgid ""
+"The second one will count the sum of all visits, including a page refresh/"
+"reload."
+msgstr "Drugi će brojati zbroj svih posjeta, uključujući osvježenje stranice."
+
+#: templates/template-parts/faq-tab.php:57
+msgid "Can I delete a page from the page visits report list?"
+msgstr "Mogu li obrisati stranicu sa liste izvještaja o posjetama stranice."
+
+#: templates/template-parts/faq-tab.php:59
+msgid "Yes, you can."
+msgstr "Da, možete."
+
+#: templates/template-parts/faq-tab.php:65
+msgid "Can I update the number of visits?"
+msgstr "Mogu li ažurirati broj posjeta?"
+
+#: templates/template-parts/faq-tab.php:67
+msgid ""
+"Yes, you can update the number of TOTAL VISITS box and you can update the "
+"number of visits for each page."
+msgstr ""
+"Da, možete ažurirati broj TOTAL VISITS kvadratića i možete ažurirati broj "
+"posjeta za svaku stranicu."
+
+#: templates/template-parts/faq-tab.php:68
+msgid ""
+"The TOTAL PAGE VISITS box will recalculate the number of page visits "
+"automatically."
+msgstr ""
+"TOTAL PAGE VISITS kvadratić će automatski ponovno izračunati broj posjeta "
+"stranicama."
+
+#: templates/template-parts/faq-tab.php:74
+msgid "Can I enable page refresh/reload counting for each page report?"
+msgstr ""
+"Mogu li uključiti brojanje osvježenja stranice za svaki izvještaj o stranici?"
+
+#: templates/template-parts/faq-tab.php:76
+msgid "No, there is no such option."
+msgstr "Ne, takva opcija ne postoji."
+
+#: templates/template-parts/faq-tab.php:82
+msgid ""
+"Can I set it up so it will preserve page visit records after the plugin is "
+"uninstalled?"
+msgstr ""
+"Je li izvedivo da se zapisi o posjetama stranica sačuvaju nakon što se "
+"dodatak deinstalira?"
+
+#: templates/template-parts/faq-tab.php:84
+msgid ""
+"Yes, you will find that option (checkbox) in the plugin settings area under "
+"the settings tab."
+msgstr ""
+"Da, pronaći će te tu opciju (checkbox) u postavkama dodatka pod izbornikom "
+"postavke."
+
+#: templates/template-parts/faq-tab.php:85
+msgid ""
+"Just check the option called \"Do not delete plugin data on plugin delete/"
+"uninstall\" and click on the Save button."
+msgstr ""
+"Samo označite opciju zvanu \"Ne briši podatke dodatka prilikom deinstalacije "
+"dodatka\" i kliknite na tipku \"Spremi\"."
+
+#: templates/template-parts/faq-tab.php:91
+msgid "Can I display a number of page visits on the website/page frontend?"
+msgstr "Mogu li prikazati broj posjeta stranice na frontendu?"
+
+#: templates/template-parts/faq-tab.php:93
+msgid ""
+"Yes, you can add and display one or both counters on the frontend of your "
+"website:"
+msgstr ""
+"Da, možete dodati i prikazati jedan ili oba brojača na prednjoj strani vaše "
+"web stranice:"
+
+#: templates/template-parts/faq-tab.php:95
+msgid "Page-Visits-Counter - does not count page refresh"
+msgstr "Page-Visits-Counter - ne broji osvježenje stranice."
+
+#: templates/template-parts/faq-tab.php:96
+msgid "Website-Visits-Counter"
+msgstr "Website-Visits-Counter"
+
+#: templates/template-parts/faq-tab.php:98
+msgid "You can find explanation in the plugin settings page under counter tab."
+msgstr ""
+"Možete pronaći objašnjenje na stranici postavki dodatka pod karticom "
+"\"Brojač\"."
+
+#: templates/template-parts/faq-tab.php:104
+msgid "Why frontend visits-counter displays N/A?"
+msgstr "Zašto brojač posjeta na frontendu prikazuje \"N/A\"?"
+
+#: templates/template-parts/faq-tab.php:122
+msgid "Does it set cookies into the user browser?"
+msgstr "Postavlja li kolačiće u korisnikov internet pretraživač?"
+
+#: templates/template-parts/faq-tab.php:124
+msgid "No, this plugin does not set browser cookie/s."
+msgstr "Ne, ovaj dodatak ne postavlja kolačić/e u internet pretraživač."
+
+#: templates/template-parts/faq-tab.php:130
+msgid "I have visited my page but my visit is not recorded?"
+msgstr "Posjetio sam svoju stranicu, ali moj posjet nije zabilježen?"
+
+#: templates/template-parts/faq-tab.php:132
+msgid ""
+"You have to logout before visiting the page or login with one of the user "
+"roles that page will count."
+msgstr ""
+"Trebate se izlogirati prije nego posjetite stranicu ili ulogirati sa jednom "
+"od uloga korisnika koju stranica broji."
+
+#: templates/template-parts/faq-tab.php:133
+#: templates/template-parts/faq-tab.php:143
+msgid ""
+"Please read the plugin documentation under titles \"NOT COUNTING\" and "
+"\"COUNTING\"."
+msgstr ""
+"Molim vas pročitajte dokumentaciju dodatka pod naslovima \"NE BROJI\" i  "
+"\"BROJI\"."
+
+#: templates/template-parts/faq-tab.php:139
+msgid ""
+"I have visited my page but only the TOTAL VISITS box has recorded the visit?"
+msgstr ""
+"Posjetio sam stranicu, ali samo TOTAL VISITS kvadratić je usnimio posjet?"
+
+#: templates/template-parts/faq-tab.php:141
+msgid ""
+"You have probably refreshed the page and the TOTAL VISITS box is counting "
+"everything including a page refresh/reload."
+msgstr ""
+"Vjerovatno ste osvježili stranicu i TOTAL VISITS kvadratić broji sve, "
+"uključujući  osvježi/ponovno učitaj stranicu."
+
+#: templates/template-parts/faq-tab.php:142
+msgid "Page visits are not counting page refresh/reload."
+msgstr "Posjeta stranici neće brojati osvježi/ponovo učitaj stranicu."
+
+#: templates/template-parts/installation-tab.php:26
+msgid "INSTALLATION"
+msgstr "INSTALACIJA"
+
+#: templates/template-parts/installation-tab.php:26
+msgid "ATTENTION"
+msgstr "PAŽNJA"
+
+#: templates/template-parts/installation-tab.php:27
+msgid ""
+"After the plugin is installed and activated, you need to flush the cache "
+"memory for all pages and delete minified javascript (JS) and styling (CSS) "
+"files."
+msgstr ""
+"Nakon što je dodatak instaliran i aktiviran, morate isprazniti predmemoriju "
+"svih stranica i izbrisati minificirane datoteke javascript (JS) i styling "
+"(CSS)."
+
+#: templates/template-parts/installation-tab.php:29
+msgid ""
+"Minified JS and CSS files will be recreated automatically by their own "
+"plugin/software."
+msgstr ""
+"Minificirane JS i CSS datoteke automatski će se ponovno stvoriti pomoću "
+"vlastitog dodatka / softvera."
+
+#: templates/template-parts/installation-tab.php:31
+msgid "WHY?"
+msgstr "ZAŠTO?"
+
+#: templates/template-parts/installation-tab.php:32
+msgid ""
+"If you are using cashing method to improve your website loading speed then "
+"you have to clean the cache memory so the plugin code gets included in your "
+"website code."
+msgstr ""
+"Ako metodu predmemoriranja koristite za poboljšanje brzine učitavanja web "
+"stranice, morate očistiti predmemoriju kako bi se kôd dodatka uključio u kod "
+"vaše web-stranice."
+
+#: templates/template-parts/installation-tab.php:33
+msgid "Otherwise, it will not work."
+msgstr "U suprotnom, to neće raditi."
+
+#: templates/template-parts/installation-tab.php:36
+msgid "WHERE TO FIND?"
+msgstr "GDJE PRONAĆI?"
+
+#: templates/template-parts/installation-tab.php:37
+msgid "A WP website cashing options can be found in:"
+msgstr "Opcije predmemoriranja (cashing) WP web stranice možete pronaći na:"
+
+#: templates/template-parts/installation-tab.php:39
+msgid "WP cashing and automatic optimization plugins"
+msgstr "WP predmemoriranje (cashing) i dodaci za automatsku optimizaciju"
+
+#: templates/template-parts/installation-tab.php:40
+msgid "Server/Hosting ( Not every hosting has this option... )"
+msgstr "Server/Hosting ( (ovu mogućnost nema svaki hosting... )"
+
+#: templates/template-parts/installation-tab.php:41
+msgid "Cloud"
+msgstr "Cloud (Oblak)"
+
+#: templates/template-parts/installation-tab.php:43
+msgid ""
+"A minify JS and CSS option can be found in WP automatic optimization plugins."
+msgstr ""
+"Opciju minificiranja JS i CSS možete pronaći u WP dodacima za automatsku "
+"optimizaciju."
+
+#: templates/template-parts/installation-tab.php:45
+msgid ""
+"You should flush the cache memory from all three places in the presented "
+"order."
+msgstr ""
+"Trebali biste isprazniti predmemoriju sa sva tri mjesta u prikazanom "
+"redoslijedu."
+
+#: templates/template-parts/installation-tab.php:46
+msgid "Usually, there are buttons for that:"
+msgstr "Obično za to postoje tipke:"
+
+#: templates/template-parts/installation-tab.php:48
+msgid "A button can be named: Clear / Purge / Flush or a brume icon instead."
+msgstr ""
+"Tipka može biti nazvana: Očisti (Clear) / Izbriši (Purge) / Isprazni (Flush) "
+"ili ikonica metle."
+
+#: templates/template-parts/installation-tab.php:49
+msgid "A button named \"Delete min JS and CSS\" or something like that."
+msgstr "Tipka nazvana \"Izbriši (Delete) min JS and CSS\" ili nešto slično."
+
+#: templates/template-parts/installation-tab.php:52
+msgid "WHAT AFTER?"
+msgstr "ŠTO NAKON SVEGA?"
+
+#: templates/template-parts/installation-tab.php:53
+msgid "After that, log out from your website and visit the page that counts."
+msgstr ""
+"Nakon toga, izlogirajte se i posjetite jednu od stranica koja broji posjete. "
+
+#: templates/template-parts/installation-tab.php:54
+msgid ""
+"That visit should be recorded and you should see it in the plugin dashboard "
+"widget. To see it, you should log in again to your WP website backend and "
+"visit the menu option called Dashboard. Search for the widget like seen in "
+"the screenshot tab."
+msgstr ""
+"Taj bi posjet trebao biti zabilježen i trebali biste ga vidjeti u widgetu "
+"nadzorne ploče. Da biste ga vidjeli, trebali biste se ponovo prijaviti u "
+"administratorsko sučelje vaše webstranice i posjetiti opciju izbornika pod "
+"nazivom Nadzorna ploča. Potražite widget kao što je prikazan na snimci "
+"zaslona."
+
+#: templates/template-parts/settings-tab.php:40
+msgid "Do not delete plugin data on plugin delete/uninstall"
+msgstr "Ne briši podatke dodatka prilikom deinstalacije dodatka"
+
+#: templates/template-parts/settings-tab.php:57
+msgid "Count Page refresh/reload"
+msgstr "Broji stranica osvježena"
+
+#: templates/template-parts/settings-tab.php:71
+msgid "SAVE"
+msgstr "Spremi"
+
+#~ msgid "Error - abort prop. missing!"
+#~ msgstr "Greška - prekid: svojstvo nije pronađeno!"

@@ -1,0 +1,55 @@
+/*
+ * PAGE LAYOUT
+ */
+
+.StrCPVisits_main-wrapper
+	font-size: $admin-settings-page-text-size
+	p
+		font-size: $admin-settings-page-paragraph-size
+
+// TABS
+.StrCPVisits-form-tab
+
+	h2
+		font-size: $admin-settings-page-h2-size
+	h3
+		font-size: $admin-settings-page-h3-size
+
+	// Unordered list - lev 1
+	ul
+		padding-left: 40px
+
+		& > li
+			list-style: disc
+
+
+			// Unordered list - sub-lev 2
+			// Menu style nested under li el.
+			& > ul
+				& > li
+					list-style: circle
+
+
+					// Unordered list - sub-lev 3
+					// Menu style nested under li el.
+					& > ul
+						& > li
+							list-style: square
+
+
+		// Unordered list - sub-lev 2
+		// Menu style nested under ul el.
+		& > ul
+			& > li
+				list-style: circle
+
+			// Unordered list - sub-lev 3
+			// Menu style nested under ul el.
+			& > ul
+				& > li
+					list-style: square
+
+
+// TEXTBOX
+.StrCPVisits-settings-page-text-box
+	max-width: $admin-settings-text-box-max-width

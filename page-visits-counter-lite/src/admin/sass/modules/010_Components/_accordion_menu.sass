@@ -1,0 +1,77 @@
+/*
+ * ACCORDION MENU COMPONENT
+ */
+
+.StrCPVisits_accordion_menu
+
+	// OPTIONS
+	.StrCPVisits_accordion_btn
+		display: flex
+		padding: 0 20px
+		align-items: center
+		text-align: left
+		background-color: $acc-menu-buttons-background-color
+		color: $acc-menu-buttons-text-color !important
+		cursor: pointer
+		border: none
+		outline: none
+		transition: 0.4s
+		font-weight: 300
+		border-bottom: $acc-menu-buttons-border-color
+		font-size: $acc-menu-buttons-text-size
+		line-height: $acc-menu-buttons-text-size
+		transition: all .2s ease
+
+		&:hover
+			background-color: $acc-menu-buttons-hover-background-color
+
+		h2
+			color: $acc-menu-buttons-text-color
+			font-size: $acc-menu-buttons-text-size
+
+		&.StrCPVisits_accordion_firsts
+			border-top: $acc-menu-buttons-border-color
+
+
+		// DEFAULT ICONS - plus/mins  - (This will display if there is no icon class set)
+		&.StrCPVisits_accordion_active::before
+			content: "-"
+			font-size: $acc-menu-buttons-close-icon-size
+
+		&::before
+			content: "+"
+			font-size: $acc-menu-buttons-open-icon-size
+			padding-right: 20px
+			width: 12px
+
+
+
+
+
+	/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover)
+
+	/* Style the accordion panel. Note: hidden by default
+
+	.StrCPVisits_accordion_panel
+		display: none
+		padding: 20px
+		background-color: $acc-menu-panel-background-color
+		font-size: $acc-menu-panel-text-size
+		color: $acc-menu-panel-text-color
+		border-bottom: 1px solid gray
+		overflow: hidden
+
+
+// USE ARROW ICONS - instead of DEFAULT icons
+.StrCPVisits_accordion_menu-with-arrows
+	// OPTIONS
+	.StrCPVisits_accordion_btn
+		// ARROW DOWN
+		&.StrCPVisits_accordion_active::before
+			content: "\25BE"
+			font-size: $acc-menu-buttons-arrow-down-icon-size
+
+		// ARROW RIGHT
+		&::before
+			content: "\25BA"
+			font-size: $acc-menu-buttons-arrow-right-icon-size

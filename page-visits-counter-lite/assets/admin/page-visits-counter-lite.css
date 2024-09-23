@@ -1,0 +1,1437 @@
+/**
+ * GLOBAL VARIABLES
+ */
+/**
+ * BUTTONS
+ *
+ * INFO: WP buttons styles are used by default
+ */
+/**
+ * TAB MENU VARIABLES
+ */
+/**
+ * ACCORDION MENU VARIABLES
+ */
+/**
+ * SPINNER VARIABLES
+ */
+/**
+ * DASHBOARD VARIABLES
+ */
+/**
+ * SETTINGS PAGE VARIABLES
+ */
+/**
+ * EXTENDS
+ */
+/**
+ * MIXINS
+ */
+/**
+ * BASE/GLOBAL CLASSES
+ */
+.clearfix {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+.StrCPVisits-success-msg {
+  color: green;
+}
+
+.StrCPVisits-error-msg {
+  color: red;
+}
+
+.StrCPVisits-warning {
+  color: red;
+}
+
+/**
+ * BUTTONS
+ */
+.StrCPVisits .button {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.StrCPVisits .button_active_background_color {
+  background-color: white;
+}
+
+.StrCPVisits .btn_active {
+  -webkit-box-shadow: 0px 7px 7px -4px #b1b1b1;
+  box-shadow: 0px 7px 7px -4px #b1b1b1;
+}
+
+.StrCPVisits .btn_primary_active {
+  -webkit-box-shadow: 0px 7px 7px -4px #b1b1b1;
+  box-shadow: 0px 7px 7px -4px #b1b1b1;
+}
+
+.StrCPVisits input[type="button"] {
+  cursor: pointer;
+}
+
+/**
+ * ICONS
+ */
+.StrCPVisits_icon_btn {
+  color: #2c7cba;
+  cursor: pointer;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.StrCPVisits_icon_btn:hover {
+  color: #0071a1;
+}
+
+.StrCPVisits_icon_btn_wrapper_disabled {
+  cursor: default !important;
+  background-color: transparent !important;
+}
+
+.StrCPVisits_icon_btn_disabled {
+  color: #a0a5aa !important;
+  cursor: default;
+}
+
+/**
+ * TAB MENU - with light tabs
+ */
+.StrCPVisits-light-tabs {
+  min-height: 300px;
+  width: -webkit-calc(100% - 70px);
+  width: calc(100% - 70px);
+  margin: 0 auto 30px;
+}
+
+.StrCPVisits-light-tabs > ul {
+  margin-bottom: 20px;
+}
+
+.StrCPVisits-light-tabs > ul > li {
+  display: inline;
+  position: relative;
+  top: 4px;
+  padding: 10px 20px;
+  background-color: #2774aa;
+  color: white;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.StrCPVisits-light-tabs > ul > li:first-of-type {
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.StrCPVisits-light-tabs > ul > li:last-of-type {
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.StrCPVisits-light-tabs > ul > li:hover {
+  top: 0;
+}
+
+.StrCPVisits-light-tabs .StrCPVisits-form-tab {
+  top: 40px;
+  left: 0;
+  padding: 20px;
+  min-height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: white;
+  color: #333;
+  overflow: auto;
+}
+
+.StrCPVisits-light-tabs .StrCPVisits-form-tab:not(:first-of-type) {
+  display: none;
+}
+
+.StrCPVisits-light-tabs .StrCPVisits-form-tab-active {
+  background-color: white !important;
+  color: #333 !important;
+  top: -2px !important;
+}
+
+/*
+ * ACCORDION MENU COMPONENT
+ */
+.StrCPVisits_accordion_menu {
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  /* Style the accordion panel. Note: hidden by default */
+}
+
+.StrCPVisits_accordion_menu .StrCPVisits_accordion_btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  background-color: #2774aa;
+  color: white !important;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-weight: 300;
+  border-bottom: 1px solid #efefef;
+  font-size: 16px;
+  line-height: 16px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.StrCPVisits_accordion_menu .StrCPVisits_accordion_btn:hover {
+  background-color: #2e85c1;
+}
+
+.StrCPVisits_accordion_menu .StrCPVisits_accordion_btn h2 {
+  color: white;
+  font-size: 16px;
+}
+
+.StrCPVisits_accordion_menu .StrCPVisits_accordion_btn.StrCPVisits_accordion_firsts {
+  border-top: 1px solid #efefef;
+}
+
+.StrCPVisits_accordion_menu .StrCPVisits_accordion_btn.StrCPVisits_accordion_active::before {
+  content: "-";
+  font-size: 36px;
+}
+
+.StrCPVisits_accordion_menu .StrCPVisits_accordion_btn::before {
+  content: "+";
+  font-size: 22px;
+  padding-right: 20px;
+  width: 12px;
+}
+
+.StrCPVisits_accordion_menu .StrCPVisits_accordion_panel {
+  display: none;
+  padding: 20px;
+  background-color: white;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid gray;
+  overflow: hidden;
+}
+
+.StrCPVisits_accordion_menu-with-arrows .StrCPVisits_accordion_btn.StrCPVisits_accordion_active::before {
+  content: "\25BE";
+  font-size: 22px;
+}
+
+.StrCPVisits_accordion_menu-with-arrows .StrCPVisits_accordion_btn::before {
+  content: "\25BA";
+  font-size: 18px;
+}
+
+/**
+ * SPINNER
+ */
+.StrCPVisits-loading-spinner-wrapper-toggle {
+  display: none;
+}
+
+.StrCPVisits-loading-spinner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 10010;
+}
+
+.StrCPVisits-spinner-loader {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  border: 4px solid #3ba2d6;
+  border-top: 4px solid white;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-animation-name: StrCPVrotate;
+  animation-name: StrCPVrotate;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes StrCPVrotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes StrCPVrotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/**
+ * DASHBOARD WIDGET - CONTENT WRAPPER
+ */
+.StrCPVisits_db_widget_wrapper {
+  background-color: #f1f1f1;
+}
+
+/**
+ * TOTAL VISIT BOXES
+ */
+.StrCPVisits_db_total_visits_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.StrCPVisits_db_total_page_visits_box {
+  position: relative;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  width: 50%;
+  background-color: #f1f1f1;
+  color: #333;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 1px 1px #f3cccc;
+  box-shadow: 1px 1px 1px 1px #f3cccc;
+}
+
+.StrCPVisits_db_total_page_visits_box .StrCPVisits-loading-spinner-wrapper-toggle {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.StrCPVisits_db_total_visits_box {
+  position: relative;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  width: 50%;
+  overflow: hidden;
+  background-color: #e0fbcc;
+  color: #333;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 1px 1px #c3d6b5;
+  box-shadow: 1px 1px 1px 1px #c3d6b5;
+}
+
+.StrCPVisits_db_total_visits_box .dashicons-edit {
+  position: absolute !important;
+  display: block !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.StrCPVisits_db_total_page_visits {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: -3px;
+}
+
+/**
+ * EDIT TOTAL VISIT - icon AND edit box
+ */
+.StrCPVisits_db_edit_total_visits_box {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  background-color: #e0fbcc;
+}
+
+.StrCPVisits_db_edit_total_visits_box form {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.StrCPVisits_db_edit_total_visits_box .StrCPVisits-loading-spinner-wrapper-toggle {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.StrCPVisits-db-edit-total-visits-nr {
+  width: 105px;
+}
+
+.StrCPVisits-db-edit-total-visits-respone-box p {
+  margin-top: 10px !important;
+  font-size: 14px !important;
+}
+
+/**
+ * QUICK INFO BUTTON
+ */
+.StrCPVisits_db_quick_info_btn {
+  font-size: 34px;
+  width: 30px;
+  height: 28px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  margin: -3px 10px -35px -10px;
+}
+
+.StrCPVisits_db_quick_info_btn.btn_active {
+  color: orange;
+  -webkit-box-shadow: 2px 9px 7px -4px #404041;
+  box-shadow: 2px 9px 7px -4px #404041;
+}
+
+/**
+ * QUICK INFO BOX
+ */
+.StrCPVisits_db_info_box {
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  padding: 15px 20px 30px;
+  -webkit-box-shadow: 0px 8px 15px -15px #444444;
+  box-shadow: 0px 8px 15px -15px #444444;
+}
+
+.StrCPVisits_db_info_box ul {
+  margin-left: 40px;
+}
+
+.StrCPVisits_db_counting_text_box {
+  color: green;
+}
+
+.StrCPVisits_db_not_counting_text_box {
+  color: red;
+}
+
+.StrCPVisits_db_not_counting_sentence {
+  font-weight: bold;
+  color: red;
+}
+
+.StrCPVisits_db_settings_btn_wrapper {
+  text-align: right;
+  padding-top: 10px;
+}
+
+/**
+ * FILTER BUTTON
+ */
+.StrCPVisits_db_list_filter_btn_wrapper {
+  width: 29px;
+  height: 27px;
+  margin-top: 1px;
+}
+
+.StrCPVisits_db_list_filter_btn {
+  font-size: 39px;
+  margin-top: -6px;
+  margin-left: -6px;
+  color: #2c7cba;
+}
+
+.StrCPVisits_icon_active {
+  -webkit-box-shadow: 0 7px 6px -3px #b1b1b1;
+  box-shadow: 0 7px 6px -3px #b1b1b1;
+}
+
+.StrCPVisits_icon_active .StrCPVisits_db_list_filter_btn {
+  color: #555;
+}
+
+/**
+ * FILTER MENU
+ */
+.StrCPVisits_db_filter_menu {
+  margin-top: 10px;
+  padding: 1px 15px;
+  background-color: #555;
+  color: white;
+  -webkit-box-shadow: 0px 8px 15px -15px #444444;
+  box-shadow: 0px 8px 15px -15px #444444;
+}
+
+.StrCPVisits_db_filter_menu_header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid #9e9e9e;
+}
+
+.StrCPVisits_db_filter_menu_header_sentence {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.StrCPVisits_db_filter_menu_header_visits {
+  color: #cecece;
+  font-size: 14px;
+}
+
+.StrCPVisits_db_filter_menu_header_nr {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.StrCPVisits_db_filter_menu_options_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.StrCPVisits_db_filter_menu_options_wrapper > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50%;
+  padding: 0 8px 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.StrCPVisits_db_filter_menu_options_wrapper > li > label {
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.StrCPVisits_db_list_row.StrCPVisits-hidden-indicator {
+  display: none;
+}
+
+.StrCPVisits_db_list_row.StrCPVisits-hidden-indicator .StrCPVisits_db_list_page_name {
+  text-decoration: line-through;
+}
+
+/**
+ * FILTER NOTIFICATION NR - OF VISITS
+ * DESC: Displayed above the filter menu button when filter menu is closed
+ *       and at least one option is filtered out.
+ */
+.StrCPVisits_db_list_filter_btn_and_notific_wrapper {
+  position: relative;
+  margin-left: 60px;
+}
+
+.StrCPVisits_db_filter_menu_notific_visits_wrapper {
+  display: none;
+  position: absolute;
+  top: -51px;
+  left: -87px;
+  border: 1px solid #a0a0a0;
+  -webkit-border-radius: 20px 20px 0 20px;
+  border-radius: 20px 20px 0 20px;
+  background-color: white;
+  padding: 0 1px;
+  width: 90px;
+  text-align: center;
+  -webkit-box-shadow: 0px 3px 12px -5px grey;
+  box-shadow: 0px 3px 12px -5px grey;
+}
+
+.StrCPVisits_db_filter_menu_notific_visits {
+  margin: 8px 0;
+}
+
+/**
+ * RESET MENU BUTTON
+ */
+.StrCPVisits_db_list_reset_menu_btn_wrapper {
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  margin-left: 3px;
+  margin-top: -13px;
+  background-color: transparent;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+.StrCPVisits_db_list_reset_menu_btn_wrapper:hover {
+  background-color: #0071a1;
+}
+
+.StrCPVisits_db_list_reset_menu_btn {
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.StrCPVisits_db_list_reset_menu_btn:hover {
+  color: white !important;
+}
+
+.StrCPVisits_db_list_reset_menu_btn.StrCPVisits_icon_btn_disabled {
+  color: #a0a5aa !important;
+}
+
+.StrCPVisits_db_list_reset_menu_btn_wrapper_active {
+  background-color: red;
+}
+
+.StrCPVisits_db_list_reset_menu_btn_active {
+  -webkit-border-radius: 33px;
+  border-radius: 33px;
+  color: white;
+  -webkit-box-shadow: 0 4px 6px -1px #585858;
+  box-shadow: 0 4px 6px -1px #585858;
+}
+
+/**
+ * RESET MENU
+ */
+.StrCPVisits_db_reset_menu {
+  margin-top: 10px;
+  padding: 20px 15px 5px;
+  background-color: #333333;
+  color: white;
+  -webkit-box-shadow: 0px 8px 15px -15px #444444;
+  box-shadow: 0px 8px 15px -15px #444444;
+}
+
+.StrCPVisits_db_reset_menu_header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #616161;
+}
+
+.StrCPVisits_db_reset_all_button {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  width: 84px;
+  font-weight: 400 !important;
+  border-color: #73807E !important;
+  color: white !important;
+  background-color: #73807E !important;
+}
+
+.StrCPVisits_db_reset_all_button:hover {
+  background-color: white !important;
+  color: #016087 !important;
+}
+
+.StrCPVisits_js_db_reset_buttons_text {
+  margin-left: 0;
+  -webkit-transition: margin-left .3s ease;
+  transition: margin-left .3s ease;
+}
+
+.StrCPVisits_db_reset_all_sentence {
+  margin-left: 12px;
+}
+
+.StrCPVisits_db_reset_response_box {
+  display: none;
+  background-color: white;
+  padding: 1px 5px;
+  text-align: center;
+}
+
+.StrCPVisits_db_reset_menu_options_wrapper li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.StrCPVisits_db_reset_button {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  width: 65px;
+  background-color: #73807E !important;
+  color: white !important;
+  border: 1px solid #73807E !important;
+}
+
+.StrCPVisits_db_reset_button:hover {
+  background-color: white !important;
+  color: #016087 !important;
+}
+
+.StrCPVisits_js_db_reset_button_page_type_name {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #d4d4d4;
+  word-break: break-all;
+}
+
+.StrCPVisits_js_db_reset_btn_active {
+  background-color: white !important;
+  color: #016087 !important;
+}
+
+.StrCPVisits_js_db_reset_btn_active .StrCPVisits_js_db_reset_buttons_text {
+  margin-left: 2px !important;
+}
+
+/**
+ * LIST TITLE AND BUTTON
+ */
+.StrCPVisits_db_list_title_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.StrCPVisits_db_list_title_inner_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.StrCPVisits_db_list_title {
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.StrCPVisits_db_list_title h3 {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: bold !important;
+  color: #23282d !important;
+}
+
+.StrCPVisits_db_list_title i {
+  font-weight: 200;
+  color: #ff2e2e;
+  border-bottom: 1px solid #ccd0d4;
+  padding-bottom: 7px;
+}
+
+/**
+ * VISITED PAGES LIST
+ */
+.StrCPVisits_db_list_wrapper {
+  width: 100%;
+  padding-top: 6px;
+  overflow: hidden;
+  min-height: 172px;
+  max-height: 550px;
+  overflow-y: scroll;
+}
+
+.StrCPVisits_db_list_row {
+  position: relative;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: transparent !important;
+  border-bottom: 1px solid #ccd0d4 !important;
+  padding: 13px 10px 13px 5px !important;
+  margin: 0;
+  font-size: 13px !important;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-left: 0;
+  height: auto;
+  -webkit-transition: background-color 1s, margin-left .5s ease 1s, height .3s ease 1.5s, padding .3s ease 1.5s !important;
+  transition: background-color 1s, margin-left .5s ease 1s, height .3s ease 1.5s, padding .3s ease 1.5s !important;
+}
+
+.StrCPVisits_db_list_row:before {
+  color: #2c7cba;
+}
+
+.StrCPVisits_db_list_row:hover {
+  background-color: #f5f4f4 !important;
+}
+
+.StrCPVisits_db_list_chkbox_wrapper {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 33px;
+}
+
+.StrCPVisits_db_list_chkbox {
+  margin: 0 !important;
+}
+
+.StrCPVisits_db_list_page_name {
+  display: block;
+  padding: 0 20px 0 0;
+  width: 100%;
+  text-align: left;
+  color: #444;
+  word-break: break-all;
+}
+
+.StrCPVisits_db_list_visits_nr {
+  font-weight: bold;
+  color: blue;
+}
+
+.StrCPVisits_db_list_row_tab {
+  background-color: white !important;
+  -webkit-box-shadow: inset 0px 10px 10px -15px black;
+  box-shadow: inset 0px 10px 10px -15px black;
+  border-bottom: 1px solid #c8c8c8 !important;
+}
+
+.StrCPVisits_db_list_row_msg_box {
+  display: none;
+  text-align: center;
+  background-color: #fffbfb;
+  padding: 1px 0;
+  -webkit-box-shadow: inset 0px 0px 2px 0px grey;
+  box-shadow: inset 0px 0px 2px 0px grey;
+  margin-bottom: 15px;
+}
+
+.StrCPVisits_db_list_row_inner_wrapper {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: transparent !important;
+}
+
+.StrCPVisits-dblist-page-visits-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.StrCPVisits-dblist-page-visits-form .StrCPVisits-loading-spinner-wrapper-toggle {
+  margin-left: 8px;
+}
+
+.StrCPVisits-dblist-page-visits-nr {
+  width: 105px;
+  margin-right: 3px;
+}
+
+.StrCPVisits-dblist-reload-page-btn {
+  display: none;
+}
+
+.StrCPVisits-dblist-delete-page-btn {
+  text-decoration: none;
+}
+
+.StrCPVisits-dblist-delete-page-btn:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: 1px solid transparent !important;
+}
+
+.StrCPVisits_dblist_delete_page_animation {
+  background-color: #ff5656 !important;
+  margin-left: -100%;
+  height: 0 !important;
+  padding: 0 !important;
+}
+
+.StrCPVisits_db_list_row_select_active:before {
+  opacity: 0;
+}
+
+.StrCPVisits_db_options_menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #e2e1e1;
+}
+
+.StrCPVisits_js_db_options_menu_right_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.StrCPVisits_db_options_menu_sort_btn {
+  text-align: center;
+  font-weight: bold;
+}
+
+/**
+ * SELECT MENU
+ */
+.StrCPVisits_db_select_menu {
+  padding: 8px;
+}
+
+.StrCPVisits_db_select_menu_header {
+  min-height: 20px;
+}
+
+.StrCPVisits_db_select_menu_body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.StrCPVisits_db_select_icon_menu_inner_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.StrCPVisits_db_select_icon_menu_inner_wrapper a {
+  text-decoration: none;
+  margin: 3px;
+  color: #a57634;
+}
+
+.StrCPVisits_db_select_icon_menu_inner_wrapper a:focus {
+  -webkit-box-shadow: 0 0 0 0 transparent !important;
+  box-shadow: 0 0 0 0 transparent !important;
+  outline: none !important;
+}
+
+.StrCPVisits_db_select_icon_menu_inner_wrapper a .dashicons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 42px;
+  height: 30px;
+}
+
+.StrCPVisits_db_select_icon_menu_active {
+  background-color: white;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 10px -2px grey;
+  box-shadow: 0 0 10px -2px grey;
+}
+
+.StrCPVisits-js-db-select-icon-menu-spinner {
+  width: 20px;
+  margin: 0 auto;
+}
+
+.StrCPVisits_db_select_response_box {
+  display: none;
+  background-color: white;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.StrCPVisits_db_select_set_visible_btn .dashicons {
+  font-size: 26px;
+}
+
+.StrCPVisits_db_select_set_hidden_btn .dashicons {
+  font-size: 26px;
+}
+
+.StrCPVisits_db_select_menu_select_all_toggle:focus {
+  -webkit-box-shadow: 0 0 0 0 transparent !important;
+  box-shadow: 0 0 0 0 transparent !important;
+  outline: none !important;
+}
+
+.StrCPVisits_db_select_menu_select_by_type_toggle:focus {
+  -webkit-box-shadow: 0 0 0 0 transparent !important;
+  box-shadow: 0 0 0 0 transparent !important;
+  outline: none !important;
+}
+
+.StrCPVisits_db_page_type_menu {
+  padding: 8px 25px 8px 25px;
+  background-color: #e2e1e1;
+}
+
+.StrCPVisits_db_page_type_menu p {
+  font-weight: bold;
+}
+
+.StrCPVisits_db_page_type_menu ul li {
+  list-style: none;
+  word-break: break-all;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.StrCPVisits_db_options_menu_hidden_toggle_btn {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  margin-left: 3px !important;
+}
+
+.StrCPVisits_db_options_menu_search_btn {
+  display: -webkit-inline-box !important;
+  display: -webkit-inline-flex !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.StrCPVisits_db_search_menu {
+  padding: 10px;
+}
+
+/**
+ * VIDEO TUTORIAL BUTTON
+ */
+a.StrCPVisits_db_video_tutorial_btn_link {
+  text-decoration: none;
+}
+
+a.StrCPVisits_db_video_tutorial_btn_link:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+}
+
+.StrCPVisits_db_video_tutorial_btn {
+  width: 40px;
+  font-size: 36px;
+  margin: -4px 20px 0 0;
+}
+
+/*
+ * PAGE LAYOUT
+ */
+.StrCPVisits_main-wrapper {
+  font-size: 14px;
+}
+
+.StrCPVisits_main-wrapper p {
+  font-size: 16px;
+}
+
+.StrCPVisits-form-tab h2 {
+  font-size: 22px;
+}
+
+.StrCPVisits-form-tab h3 {
+  font-size: 18px;
+}
+
+.StrCPVisits-form-tab ul {
+  padding-left: 40px;
+}
+
+.StrCPVisits-form-tab ul > li {
+  list-style: disc;
+}
+
+.StrCPVisits-form-tab ul > li > ul > li {
+  list-style: circle;
+}
+
+.StrCPVisits-form-tab ul > li > ul > li > ul > li {
+  list-style: square;
+}
+
+.StrCPVisits-form-tab ul > ul > li {
+  list-style: circle;
+}
+
+.StrCPVisits-form-tab ul > ul > ul > li {
+  list-style: square;
+}
+
+.StrCPVisits-settings-page-text-box {
+  max-width: 650px;
+}
+
+/*
+ * SETTINGS TAB CONTENT
+ */
+.StrCPVisits-light-tab-settings ul li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 60px;
+  padding-bottom: 40px;
+}
+
+.StrCPVisits-light-tab-settings .StrCPVisits-settings-form-response-box-individual {
+  margin-left: 20px;
+}
+
+.StrCPVisits-light-tab-settings .StrCPVisits-settings-form-response-box-individual .dashicons-yes {
+  font-size: 40px;
+  color: green;
+  width: 40px;
+  height: 40px;
+}
+
+.StrCPVisits-light-tab-settings .StrCPVisits-settings-form-submit-btn-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.StrCPVisits-light-tab-settings .StrCPVisits-settings-form-submit-btn-wrapper .StrCPVisits-loading-spinner-wrapper-toggle {
+  margin-left: 8px;
+}
+
+.StrCPVisits-light-tab-settings .StrCPVisits-count-page-refresh {
+  display: none;
+}
+
+/*
+ * COUNTER TAB CONTENT
+ */
+.StrCPVisits-light-tab-counter .StrCPVisits-light-tab-counter-description {
+  font-weight: bold;
+  color: #5a5a5a;
+}
+
+.StrCPVisits-light-tab-counter .StrCPVisits-light-tab-counter-info-section {
+  display: inline-block;
+  padding: 0 20px 20px;
+  background-color: #ececec;
+  color: #555555;
+}
+
+.StrCPVisits-light-tab-counter .dashicons-format-video {
+  padding-right: 20px;
+  font-size: 32px;
+  margin-top: -5px;
+}
+
+.StrCPVisits-light-tab-counter .StrCPVisits-light-tab-counter-video-expl-link {
+  font-size: 18px;
+}
+
+.StrCPVisits-light-tab-counter ul.StrCPVisits-frontend-counter-code-list li {
+  list-style: none;
+}
+
+.StrCPVisits-light-tab-counter .StrCPVisits-frontend-counter-code-description {
+  padding: 20px;
+  background-color: #ededed;
+}
+
+.StrCPVisits-light-tab-counter .StrCPVisits-counter-tab-content-col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  min-height: 60px;
+  padding-bottom: 40px;
+}
+
+.StrCPVisits-light-tab-counter .strcpv-page-counter-example {
+  border: 1px dashed #c2c2c2;
+  -webkit-box-shadow: 0 3px 15px -10px grey;
+  box-shadow: 0 3px 15px -10px grey;
+}
+
+.StrCPVisits-light-tab-counter .StrCPVisits-counter-code-box {
+  padding: 20px;
+}
+
+.StrCPVisits-light-tab-counter .StrCPVisits-counter-code-box h4 {
+  color: #555555;
+  font-family: serif;
+  letter-spacing: 0.9px;
+  font-size: 16px;
+}
+
+.StrCPVisits-light-tab-counter .StrCPVisits-frontend-counter-code-select-position-text {
+  color: #5a5a5a;
+}
+
+.StrCPVisits-light-tab-counter .StrCPVisits-two-col code {
+  display: block;
+  width: 300px;
+  padding: 12px;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.StrCPVisits-light-tab-counter .strcpv-js-page-counter-example-pos {
+  text-align: left;
+}
+
+.StrCPVisits-light-tab-counter .strcpv-page-counter-example-base {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.StrCPVisits-light-tab-counter .strcpv-page-counter-example-base i {
+  color: #555555;
+  margin: 1px 5px 0 0;
+}
+
+.StrCPVisits-light-tab-counter .strcpv-page-counter-example-light p {
+  display: inline-block !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 5px !important;
+  padding-right: 1px !important;
+  letter-spacing: 5px !important;
+  background-color: #d8d8d8 !important;
+  color: #333333 !important;
+  -webkit-border-radius: 4px !important;
+  border-radius: 4px !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
+}
+
+.StrCPVisits-light-tab-counter .strcpv-page-counter-example-dark p {
+  display: inline-block !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 5px !important;
+  padding-right: 1px !important;
+  letter-spacing: 5px !important;
+  background-color: black !important;
+  color: white !important;
+  -webkit-border-radius: 4px !important;
+  border-radius: 4px !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
+}
+
+@media (max-width: 1800px) {
+  .StrCPVisits-light-tab-counter .StrCPVisits-counter-tab-content-col {
+    max-width: 900px !important;
+    margin: 0 auto;
+  }
+  .StrCPVisits-light-tab-counter .StrCPVisits-counter-code-box {
+    padding: 20px 40px !important;
+  }
+}
+
+/*
+ * DOCUMENTATION TAB CONTENT
+ */
+.StrCPVisits-light-tab-documentation ul {
+  padding-left: 40px;
+}
+
+.StrCPVisits-light-tab-documentation ul li {
+  list-style: disc;
+}
+
+/*
+ * FAQ TAB CONTENT
+ */
+.StrCPVisits-light-tab-faq section.StrCPVisits_accordion_btn {
+  padding: 10px 20px;
+}
+
+.StrCPVisits-light-tab-faq section.StrCPVisits_accordion_btn h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/*
+ * ABOUT TAB CONTENT
+ */
+/*
+ * INSTALLATION TAB CONTENT
+ */

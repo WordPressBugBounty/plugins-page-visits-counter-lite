@@ -1,0 +1,56 @@
+/**
+ * TAB MENU - with light tabs
+ */
+
+
+.StrCPVisits-light-tabs
+	min-height: 300px
+	width: calc(100% - 70px)
+	margin: 0 auto 30px
+
+	&>ul
+		margin-bottom: 20px
+
+		// Menu Options
+		&>li
+			display: inline
+			position: relative
+			top: 4px
+			padding: 10px 20px
+			background-color: $tab-menu-options-background-color
+			color: $tab-menu-options-text-color
+			margin: 0
+			border: 0
+			cursor: pointer
+			transition: all $tab-menu-options-transition
+
+		&>li:first-of-type
+			border-top-left-radius: $tab-menu-options-border-top-radius
+
+		&>li:last-of-type
+			border-top-right-radius: $tab-menu-options-border-top-radius
+
+		&>li:hover
+			top: 0
+
+	// Option tab
+	.StrCPVisits-form-tab
+		top: 40px
+		left: 0
+		padding: 20px
+		min-height: 100%
+		width: 100%
+		box-sizing: border-box
+		background-color: $tab-menu-option-tabs-background-color
+		color: $tab-menu-option-tabs-text-color
+		overflow: auto
+
+	// Not active option tabs
+	.StrCPVisits-form-tab:not(:first-of-type)
+		display: none
+
+	// Menu active option
+	.StrCPVisits-form-tab-active
+		background-color: $tab-menu-options-active-option-background-color !important
+		color: $tab-menu-options-active-option-text-color !important
+		top: -2px !important

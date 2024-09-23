@@ -1,0 +1,37 @@
+/**
+ * SPINNER
+ */
+
+.StrCPVisits-loading-spinner-wrapper-toggle
+	display: none
+
+.StrCPVisits-loading-spinner
+	position: relative
+	top: 0
+	left: 0
+	width: 20px
+	height: 20px
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	z-index: 10010
+
+.StrCPVisits-spinner-loader
+	width: 10px
+	height: 10px
+	border-radius:  100%
+	border: 4px solid $global-spinner-primary-color
+	border-top: 4px solid $global-spinner-secondary-color
+
+	transition-property: transform
+	animation-name: StrCPVrotate
+	animation-duration: $global-spinner-rotating-speed
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+
+@keyframes StrCPVrotate
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(360deg)
