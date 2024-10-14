@@ -3,8 +3,8 @@ Contributors: strongetic
 Donate link: https://www.fiverr.com/denis555/gladly-accept-5usd-tip-for-my-good-work/
 Tags: page counter, post counter, page visits, post visits, wordpress post view, wordpress page view, wordpress visit stats, page visits report, console counter, count without refresh, count without reload, developer tools counter
 Requires at least: 5.0
-Tested up to: 6.4.2
-Stable tag: 1.2.0.
+Tested up to: 6.6.2
+Stable tag: 1.2.1.
 Requires PHP: 5.6.40
 WC requires at least: 4.9.2
 WC tested up to: 6.7.0
@@ -306,6 +306,11 @@ That visit should be recorded and you should see it in the plugin dashboard widg
 
 
 == Changelog ==
+
+= 1.2.1 - 12.10.2024 =
+
+Tested on WP version 6.6.2
+Bug Fixed - delete page
 
 = 1.2.0 - 13.12.2023 =
 

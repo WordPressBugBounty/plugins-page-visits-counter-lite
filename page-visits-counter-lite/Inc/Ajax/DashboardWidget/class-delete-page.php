@@ -44,7 +44,7 @@ class Delete_Page extends Options {
 	 * This method is triggered as an AJAX callback to delete a page from the "strcpv_visits_by_page" option along with its data.
 	 * It performs necessary security checks and updates, ensuring the deletion is secure and allowed for administrators.
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.1
 	 */
 	public function StrCPVisits_delete_page() {
 
@@ -75,7 +75,10 @@ class Delete_Page extends Options {
 		 * @since 1.0.0
 		 */
 		if ( isset( $_POST['page_name'] ) ) {
-			$page_name = sanitize_text_field( $_POST['page_name'] );
+			// Decode the URL-encoded string
+			$page_name = urldecode( $_POST['page_name'] );
+			 // Now sanitize the decoded string
+			 $page_name = wp_strip_all_tags( $page_name );  // Sanitize but keep quotes intact
 		} else {
 			wp_send_json_error( esc_html__( 'Error - Page name missing!', 'page-visits-counter-lite' ) ); // Abort.
 		}

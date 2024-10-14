@@ -3,7 +3,7 @@
  *
  * DESC: Execute delete page procedure on delete button click.
  *
- * @since 1.0.0
+ * @since 1.2.1
  */
 const AjaxDeletePage = (function(){
 
@@ -30,6 +30,8 @@ const AjaxDeletePage = (function(){
 
 		// Get page name.
 		let page_name = $(this).attr('data-StrCPVisits-dblist-page-name');
+		// Encode the page name.
+		page_name = encodeURIComponent(page_name);
 
 		$.ajax({
 			url: ajaxurl,  // Works by default in WP backend.
