@@ -1,14 +1,14 @@
 <?php
 /**
  * @link              strongetic.com
- * @since             1.2.1
+ * @since             1.2.2
  * @package           Strongetic - count page visits
  *
  * @wordpress-plugin
  * Plugin Name:       Page Visits Counter - Lite
  * Plugin URI:        https://strongetic.com/free-wp-plugins/page-visits-counter-lite/
  * Description:       Display number of visits for each page in admin dashboard and browser developer-tool/console. Doesn't count page refresh as a new visit...
- * Version:           1.2.1
+ * Version:           1.2.2
  * Author:            Denis Botic
  * Author URI:        strongetic.com
  * License:           GPL-2.0+
@@ -16,13 +16,33 @@
  * Text Domain:       page-visits-counter-lite
  * Domain Path:       /lang
  * WC requires at least: 4.9.2
- * WC tested up to: 5.0.0
+ * WC tested up to: 9.5.1
  */
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+
+
+
+/**
+ * Declare Compatibility with WooCommerce High-Performance order storage (HPOS)
+ *
+ * DESC: Inform WooCommerce that this plugin is compatible with HPOS.
+ * INFO: This is required to prevent error message
+ *       "This plugin is incompatible with the enabled WooCommerce features 'Remote Logging' and 'High-Performance order storage'. It shouldn't be activated".
+ *       This error message is displayed in admin plugins page in plugin section.
+ *
+ *       This plugin doesn't cause any conflicts with HPOS and Remote Logging, so we need this declaration only to inform WooCommerce that this plugin is compatible with HPOS and Remote Logging.
+ *       (Remote logging is in wp-admin/woocommerce/settings/advanced/woocommerce.com -> Enable tracking option)
+ */
+add_action('before_woocommerce_init', function() {
+	if ( class_exists(\Automattic\WooCommerce\Utilities\FeaturesUtil::class) ) {
+		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true);
+	}
+});
 
 
 
