@@ -1,14 +1,14 @@
 <?php
 /**
  * @link              strongetic.com
- * @since             1.2.2
+ * @since             1.2.3
  * @package           Strongetic - count page visits
  *
  * @wordpress-plugin
  * Plugin Name:       Page Visits Counter - Lite
  * Plugin URI:        https://strongetic.com/free-wp-plugins/page-visits-counter-lite/
  * Description:       Display number of visits for each page in admin dashboard and browser developer-tool/console. Doesn't count page refresh as a new visit...
- * Version:           1.2.2
+ * Version:           1.2.3
  * Author:            Denis Botic
  * Author URI:        strongetic.com
  * License:           GPL-2.0+
@@ -16,7 +16,7 @@
  * Text Domain:       page-visits-counter-lite
  * Domain Path:       /lang
  * WC requires at least: 4.9.2
- * WC tested up to: 9.5.1
+ * WC tested up to: 10.6.2
  */
 
 // Exit if accessed directly.
