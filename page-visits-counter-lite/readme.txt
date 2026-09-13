@@ -4,7 +4,7 @@ Donate link: https://www.fiverr.com/denis555/gladly-accept-5usd-tip-for-my-good-
 Tags: page views, visit stats, page visit counter, wordpress counter, developer tools counter
 Requires at least: 5.0
 Tested up to: 7.1
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 Requires PHP: 5.6.40
 WC requires at least: 4.9.2
 WC tested up to: 11.1.0
@@ -309,6 +309,12 @@ That visit should be recorded and you should see it in the plugin dashboard widg
 
 == Changelog ==
 
+= 2.0.1 - 13.09.2026 =
+
+- Existing input sanitization was verified for AJAX settings_data.
+- XML output was reviewed to ensure post titles are safely encoded.
+- wp_unslash() was used to normalize input before comparison; this is not a security measure.
+
 = 2.0.0 - 13.09.2026 =
 
 Tested on WP version 7.1
@@ -316,7 +322,7 @@ Tested on WooCommerce version 11.1.0
 
 Security improvements:
 - Improved validation and sanitization of data received through AJAX requests.
-- Added HMAC signature verification to protect frontend page name integrity.
+- Added HMAC signature verification to protect frontend page name integrity, as WordPress nonces are unsuitable for cached pages.
 - Prevented arbitrary page names from being added to stored visit data.
 - Improved validation of data before updating plugin options.
 - Strengthened security checks for administrative AJAX actions.

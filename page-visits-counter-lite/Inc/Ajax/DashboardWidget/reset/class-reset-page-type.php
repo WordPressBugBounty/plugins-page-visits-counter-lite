@@ -87,7 +87,8 @@ class Reset_Page_Type extends Options {
 			 *
 			 * @since 1.0.0
 			 */
-			$page_name = sanitize_text_field( $page_name );
+			$raw_page_name = wp_unslash( $page_name ); // Remove backslashes
+			$page_name = sanitize_text_field( $raw_page_name );
 			array_push( $page_names_arr, $page_name );
 		}
 

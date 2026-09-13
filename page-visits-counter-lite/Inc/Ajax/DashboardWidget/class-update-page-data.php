@@ -65,9 +65,9 @@ class Update_Page_Data extends Options {
 		 * For that reason we need to parse data once more, so we can access them.
 		 */
 		if ( isset( $_POST['settings_data'] ) ) {
-			parse_str( $_POST['settings_data'], $settings_data );
+			$raw_settings_data = wp_unslash( $_POST['settings_data'] ); // Remove backslashes
+			parse_str( $raw_settings_data, $settings_data );
 		}
-
 
 		// NEW NUMBER OF VISITS.
 		if ( isset( $settings_data['StrCPVisits-dblist-page-visits-nr'] ) ) {
