@@ -63,14 +63,30 @@ class Total_Visits extends Counter_Base {
 		}
 
 
+		/*
+		 * Generate a server-side signature for the page name.
+		 *
+		 * The page name is public, but the HMAC secret is not.
+		 * Visitors can read the signature, but cannot generate a valid
+		 * signature for a different page name without the WordPress secret.
+		 */
+		$page_signature = '';
+		if ( false !== $page_name ) {
+			$page_signature = hash_hmac(
+				'sha256',
+				'StrCPVisits|' . $page_name,
+				wp_salt( 'auth' )
+			);
+		}
 
 
 		// Display JS abort variable in page header.
 		?>
 		<script type="text/javascript">
 			var StrCPVisits_page_data = {
-				'abort' : '<?php echo $abort; ?>',
-				'title' : '<?php echo $page_name; ?>',
+				'abort'     : '<?php echo $abort; ?>',
+				'title'     : <?php echo wp_json_encode( $page_name ); ?>,
+				'signature' : <?php echo wp_json_encode( $page_signature ); ?>,
 			};
 		</script>
 		<?php

@@ -1,11 +1,13 @@
-//OPTIONS MENU
+// OPTIONS MENU
 
 .StrCPVisits_db_options_menu
-	display: flex
-	justify-content: space-between
+	display: grid
+	grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr)
+	align-items: center
 	padding: 8px
 	background-color: $db-options-menu-background-color
 
 // BOX RIGHT
 .StrCPVisits_js_db_options_menu_right_box
 	display: flex
+	justify-self: end

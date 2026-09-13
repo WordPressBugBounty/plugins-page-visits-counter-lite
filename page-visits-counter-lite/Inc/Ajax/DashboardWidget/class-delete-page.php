@@ -75,14 +75,16 @@ class Delete_Page extends Options {
 		 * @since 1.0.0
 		 */
 		if ( isset( $_POST['page_name'] ) ) {
-			// Decode the URL-encoded string
-			$page_name = urldecode( $_POST['page_name'] );
-			 // Now sanitize the decoded string
-			 $page_name = wp_strip_all_tags( $page_name );  // Sanitize but keep quotes intact
+
+			// WordPress request data is slashed.
+			$page_name = wp_unslash( $_POST['page_name'] );
+
+			// Sanitize text while preserving quotes.
+			$page_name = sanitize_text_field( $page_name );
+
 		} else {
 			wp_send_json_error( esc_html__( 'Error - Page name missing!', 'page-visits-counter-lite' ) ); // Abort.
 		}
-
 
 
 

@@ -1435,3 +1435,33 @@ a.StrCPVisits_db_video_tutorial_btn_link:focus {
 /*
  * INSTALLATION TAB CONTENT
  */
+
+.StrCPVisits_db_export_buttons {
+  display: inline-flex;
+  gap: 6px;
+  margin-left: 12px;
+}
+
+.StrCPVisits_db_export_buttons .button {
+  font-size: 11px;
+  line-height: 1.8;
+  min-height: 28px;
+  padding: 0 8px;
+}
+
+.StrCPVisits .StrCPVisits_db_options_menu {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+}
+
+.StrCPVisits .StrCPVisits_js_db_options_menu_right_box {
+  justify-self: end;
+}
+
+.StrCPVisits_db_export_buttons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-left: 0;
+}

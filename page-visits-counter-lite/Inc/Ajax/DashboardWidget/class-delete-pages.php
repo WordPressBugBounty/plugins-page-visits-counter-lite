@@ -85,7 +85,7 @@ class Delete_Pages extends Options {
 			 *
 			 * @since 1.0.0
 			 */
-			$page_name = sanitize_text_field( $page_name );
+			$page_name = sanitize_text_field( wp_unslash( $page_name ) );
 			array_push( $page_names_arr, $page_name );
 		}
 

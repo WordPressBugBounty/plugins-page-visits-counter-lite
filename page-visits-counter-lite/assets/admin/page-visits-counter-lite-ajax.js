@@ -109,8 +109,6 @@
 
 			// Get page name.
 			var page_name = $(this).attr('data-StrCPVisits-dblist-page-name');
-			// Encode the page name.
-			page_name = encodeURIComponent(page_name);
 
 			$.ajax({
 				url: ajaxurl, // Works by default in WP backend.
@@ -1057,4 +1055,17 @@
 			spinner.hide();
 		}
 	}();
+})(jQuery);
+
+(function ($) {
+	var csv_button = $('#StrCPVisits_js_db_export_csv_btn');
+	var xml_button = $('#StrCPVisits_js_db_export_xml_btn');
+	function downloadReport(action) {
+		var form = $('<form>', { action: ajaxurl, method: 'post' }).append($('<input>', { type: 'hidden', name: 'action', value: action }), $('<input>', { type: 'hidden', name: 'security', value: STR_CPVISITS.security }));
+		$('body').append(form);
+		form.submit();
+		form.remove();
+	}
+	csv_button.click(function () { downloadReport('StrCPVisits_export_csv'); });
+	xml_button.click(function () { downloadReport('StrCPVisits_export_xml'); });
 })(jQuery);

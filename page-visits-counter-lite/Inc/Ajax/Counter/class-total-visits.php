@@ -47,9 +47,44 @@ class Total_Visits extends Options {
 	 */
 	public function StrCPVisits_update_total_visits() {
 
+		/*
+		 * NONCE VERIFICATION IS INTENTIONALLY DISABLED FOR THIS PUBLIC FRONTEND
+		 * AJAX REQUEST SO THAT VISIT COUNTING WORKS CORRECTLY WITH FULL-PAGE CACHING.
+		 *
+		 * IMPORTANT: This is intentional. A cached page may contain an expired nonce,
+		 * which would prevent legitimate visitors from being counted correctly.
+		 *
+		 * DETAIL EXPLANATION:
+		 * This endpoint is executed after the frontend page has been loaded and must
+		 * also work correctly when the page is served from a full-page cache.
+		 * In that situation, a nonce generated when the page was originally cached
+		 * may expire before the cached page itself expires, causing the AJAX request
+		 * to fail for legitimate visitors.
+		 *
+		 * A WordPress nonce is a CSRF protection mechanism, but it is not an
+		 * authentication, authorization, or anti-bot mechanism. Since this is a
+		 * public frontend endpoint, the nonce is necessarily exposed to the client
+		 * and therefore cannot be treated as a secret or as protection against
+		 * deliberate automated requests or counter manipulation.
+		 *
+		 * The data processed by this endpoint is not arbitrary user-supplied data.
+		 * The page name is dynamically obtained on the server from the current
+		 * WordPress object (post, page, product, archive, etc.), using data already
+		 * handled by WordPress/WooCommerce. The visit counter value is obtained
+		 * from the database, validated as the existing counter value, incremented
+		 * by one, and then stored back in the database.
+		 *
+		 * Therefore, this endpoint does not accept arbitrary page names or arbitrary
+		 * counter values from the client for storage. The client only initiates the
+		 * counting operation; the relevant page data and counter value are derived
+		 * and processed server-side.
+		 *
+		 * Nonce verification remains enabled for authenticated/admin AJAX operations
+		 * where it provides meaningful CSRF protection for privileged actions.
+		 */
 
-		// DISABLED - so it will work properly if website is cashed.
-		// // Verify if data is submitted from corresponding ajax request. ( By using wp_nonce. )
+		// Verify if data is submitted from corresponding AJAX request by using a WordPress nonce.
+		// Intentionally DISABLED - so it will work properly if website is cashed. (See security explanation above.)
 		// if ( !check_ajax_referer( 'StrCPVisits_frontend', 'security' ) ) {
 		// 	return; // Abort.
 		// }
@@ -64,19 +99,41 @@ class Total_Visits extends Options {
 
 
 		/**
-		 * $page_name - sanitize
+		 * $page_name - Validate and sanitize
 		 *
-		 * INFO: No need for hard core security because it is only going to be compared
-		 *       with asoc-array keys retrieved from the DB option.
+		 * INFO: The page name is supplied by the frontend, so its integrity must be
+		 *       verified before it is used in the visits data. A server-generated
+		 *       HMAC signature is checked to ensure that the page name was generated
+		 *       by this plugin and has not been modified by the visitor.
 		 *
-		 * VALIDATION: page_name can be anything.
-		 *       There is no point restricting the maximum number of characters as it is
-		 *       only going to be compared with asoc-array keys retrieved from the DB option.
+		 * VALIDATION: No maximum length is enforced because the page name is generated
+		 *             from the current WordPress page context and is only used as an
+		 *             associative-array key after the HMAC signature has been verified.
 		 *
 		 * @since 1.0.0
 		 */
-		if ( isset( $_POST['page_data']['title'] ) ) {
-			$page_name = sanitize_text_field( $_POST['page_data']['title'] );
+		if ( isset( $_POST['page_data']['title'] ) && isset( $_POST['page_data']['signature'] ) ) {
+			$page_name = sanitize_text_field(
+				wp_unslash( $_POST['page_data']['title'] )
+			);
+
+			$page_signature = sanitize_text_field(
+				wp_unslash( $_POST['page_data']['signature'] )
+			);
+
+			$expected_signature = hash_hmac(
+				'sha256',
+				'StrCPVisits|' . $page_name,
+				wp_salt( 'auth' )
+			);
+
+			if ( ! hash_equals( $expected_signature, $page_signature ) ) {
+
+				$final_response['msg'] = esc_html__( 'Error - invalid page data!', 'page-visits-counter-lite' );
+
+				wp_send_json_error( $final_response );
+			}
+
 		} else {
 			$final_response['msg'] = esc_html__( 'Error - title prop. missing!', 'page-visits-counter-lite' );
 			wp_send_json_success( $final_response ); // Abort.
@@ -121,8 +178,8 @@ class Total_Visits extends Options {
 				$final_response['total_visits']['update'] = false;
 				$final_response['total_visits']['nr']     = esc_html( get_option( STRCPV_OPT_NAME['total_visits'] ) );
 				// Get total page visits response.
-				$final_response['page_visits']       = false;
-				$final_response['page_visits']['nr'] = esc_html( $this->get_visits_nr_by_page_name( $page_name ) );
+				$final_response['page_visits']['update'] = false;
+				$final_response['page_visits']['nr']     = esc_html( $this->get_visits_nr_by_page_name( $page_name ) );
 
 				wp_send_json_success( $final_response ); // Abort.
 			}
@@ -140,8 +197,26 @@ class Total_Visits extends Options {
 		/**
 		 * GET REAL USER IP ADDRESS
 		 *
-		 * INFO: The purpose of getting the user ip address is only for checking if page is refreshed.
-		 *       User IP address is going to be HASHED and cashed in memory for up to one hour.
+		 * INFO:
+		 * The user IP address is used only to detect whether the same visitor
+		 * has refreshed the page, so that repeated refreshes are not counted
+		 * as additional visits during the detection period.
+		 *
+		 * The IP address is hashed before being stored and the resulting hash
+		 * is retained for up to one hour for duplicate-visit detection.
+		 *
+		 * SECURITY NOTE:
+		 * This value is intentionally used only as a short-lived identifier for
+		 * detecting repeated page refreshes and preventing duplicate visit counting.
+		 *
+		 * Client IP headers such as X-Forwarded-For may be spoofed. If an attacker
+		 * changes the reported IP address, the same client may be treated as a new
+		 * visitor and an additional visit may be counted. The resulting impact is
+		 * limited to the accuracy of the visit statistics.
+		 *
+		 * The IP address is not used for authentication, authorization, access
+		 * control, or access to sensitive data, and is therefore not a security
+		 * boundary or security-sensitive identity.
 		 *
 		 * @since 1.0.0
 		 */

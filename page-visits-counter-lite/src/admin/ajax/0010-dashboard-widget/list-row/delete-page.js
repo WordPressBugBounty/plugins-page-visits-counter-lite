@@ -30,8 +30,6 @@ const AjaxDeletePage = (function(){
 
 		// Get page name.
 		let page_name = $(this).attr('data-StrCPVisits-dblist-page-name');
-		// Encode the page name.
-		page_name = encodeURIComponent(page_name);
 
 		$.ajax({
 			url: ajaxurl,  // Works by default in WP backend.

@@ -57,3 +57,10 @@ if ( file_exists( dirname( __FILE__ ) . '/DashboardWidget/reset/class-reset-page
 if ( file_exists( dirname( __FILE__ ) . '/DashboardWidget/class-toggle-hidden-reports.php' ) ) {
 	require_once dirname( __FILE__ ) . '/DashboardWidget/class-toggle-hidden-reports.php';
 }
+if ( file_exists( dirname( __FILE__ ) . '/DashboardWidget/class-export-csv.php' ) ) {
+	require_once dirname( __FILE__ ) . '/DashboardWidget/class-export-csv.php';
+}
+
+if ( file_exists( dirname( __FILE__ ) . '/DashboardWidget/class-export-xml.php' ) ) {
+	require_once dirname( __FILE__ ) . '/DashboardWidget/class-export-xml.php';
+}

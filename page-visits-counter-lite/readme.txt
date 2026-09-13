@@ -3,11 +3,11 @@ Contributors: strongetic
 Donate link: https://www.fiverr.com/denis555/gladly-accept-5usd-tip-for-my-good-work/
 Tags: page views, visit stats, page visit counter, wordpress counter, developer tools counter
 Requires at least: 5.0
-Tested up to: 6.9.4
-Stable tag: 1.2.3
+Tested up to: 7.1
+Stable tag: 2.0.0
 Requires PHP: 5.6.40
 WC requires at least: 4.9.2
-WC tested up to: 10.6.2
+WC tested up to: 11.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,8 @@ You can add and display counters on the frontend of your website:
 
 
 ( Page-visits-counter does not count page refresh as a new visit while Website-visits-counter counts everything. )
+
+Export page visits data as CSV or XML.
 
 <h3> Hidden page counter + admin page reports </h3>
 
@@ -307,7 +309,26 @@ That visit should be recorded and you should see it in the plugin dashboard widg
 
 == Changelog ==
 
-= 1.1.6 - 10.02.2023 =
+= 2.0.0 - 13.09.2026 =
+
+Tested on WP version 7.1
+Tested on WooCommerce version 11.1.0
+
+Security improvements:
+- Improved validation and sanitization of data received through AJAX requests.
+- Added HMAC signature verification to protect frontend page name integrity.
+- Prevented arbitrary page names from being added to stored visit data.
+- Improved validation of data before updating plugin options.
+- Strengthened security checks for administrative AJAX actions.
+- Improved handling of invalid and missing request data.
+
+Known Bugs Fixed:
+- Fixed an issue where the page title did not correctly display the French apostrophe (’).
+
+New Functionality
+- Export page visits data as CSV and/or XML
+
+= 1.2.6 - 03.04.2026 =
 
 Tested on WP version 6.9.4
 Tested on WooCommerce version 10.6.2

@@ -54,6 +54,23 @@ class Options {
 		if ( $data_ser === false ) {
 			return [];
 		} else {
+			/*
+			 * SECURITY NOTE:
+			 * maybe_unserialize() is safe here because visitors cannot submit data
+			 * that is stored in this option. The data is either entered by an
+			 * administrator in the backend or generated automatically by the plugin
+			 * from existing WordPress content and visit counts.
+			 *
+			 * Page, post, product and other WordPress titles come from the existing
+			 * WordPress content and are used only as page names. They are not used
+			 * to store or submit serialized PHP data.
+			 *
+			 * DETAILED EXPLANATION:
+			 * Backend changes require the 'manage_options' capability and the visit
+			 * count is validated as numeric. Frontend data is generated automatically
+			 * by the plugin from the current WordPress content and visit count, without
+			 * allowing visitors to submit arbitrary data to this option.
+			 */
 			return maybe_unserialize( $data_ser );
 		}
 	}
@@ -384,6 +401,24 @@ class Options {
 			 * OPTION EXIST - and holds at least an empty serialized array.
 			 * ( We have some data. )
 			 */
+
+			/*
+			 * SECURITY NOTE:
+			 * maybe_unserialize() is safe here because visitors cannot submit data
+			 * that is stored in this option. The data is either entered by an
+			 * administrator in the backend or generated automatically by the plugin
+			 * from existing WordPress content and visit counts.
+			 *
+			 * Page, post, product and other WordPress titles come from the existing
+			 * WordPress content and are used only as page names. They are not used
+			 * to store or submit serialized PHP data.
+			 *
+			 * DETAILED EXPLANATION:
+			 * Backend changes require the 'manage_options' capability and the visit
+			 * count is validated as numeric. Frontend data is generated automatically
+			 * by the plugin from the current WordPress content and visit count, without
+			 * allowing visitors to submit arbitrary data to this option.
+			 */
 			$visits_by_page_data_arr = maybe_unserialize( $visits_by_page_data_ser );
 			if ( isset( $visits_by_page_data_arr[ $page_name ] ) ) {
 				// Value has a record of page data.
@@ -425,6 +460,23 @@ class Options {
 	public function get_hidden_page_reports_data() {
 		$data_ser = get_option( STRCPV_OPT_NAME['hidden_page_reports'] );
 		if ( $data_ser !== false ) {
+			/*
+			 * SECURITY NOTE:
+			 * maybe_unserialize() is safe here because visitors cannot submit data
+			 * that is stored in this option. The data is either entered by an
+			 * administrator in the backend or generated automatically by the plugin
+			 * from existing WordPress content and visit counts.
+			 *
+			 * Page, post, product and other WordPress titles come from the existing
+			 * WordPress content and are used only as page names. They are not used
+			 * to store or submit serialized PHP data.
+			 *
+			 * DETAILED EXPLANATION:
+			 * Backend changes require the 'manage_options' capability and the visit
+			 * count is validated as numeric. Frontend data is generated automatically
+			 * by the plugin from the current WordPress content and visit count, without
+			 * allowing visitors to submit arbitrary data to this option.
+			 */
 			return maybe_unserialize( $data_ser );
 		} else {
 			return [];

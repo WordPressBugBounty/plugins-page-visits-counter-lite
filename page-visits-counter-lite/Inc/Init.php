@@ -49,6 +49,8 @@ final class Init {
 			Ajax\Dashboard_Widget\reset\Reset_All::class,
 			Ajax\Dashboard_Widget\reset\Reset_Page_Type::class,
 			Ajax\Dashboard_Widget\Toggle_Hidden_Reports::class,
+			Ajax\Dashboard_Widget\Export_CSV::class,
+			Ajax\Dashboard_Widget\Export_XML::class,
 		];
 		// From php 5.4 we can use [].
 	}

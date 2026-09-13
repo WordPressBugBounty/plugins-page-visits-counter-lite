@@ -229,6 +229,12 @@ class Dashboard_Widget extends Base_Controller {
 					</div>
 
 
+					<!-- EXPORT BUTTONS -->
+					<div class="StrCPVisits_db_export_buttons">
+						<button type="button" id="StrCPVisits_js_db_export_csv_btn" class="button">CSV-EXPORT</button>
+						<button type="button" id="StrCPVisits_js_db_export_xml_btn" class="button">XML-EXPORT</button>
+					</div>
+
 					<!-- BOX RIGHT -->
 					<div class="StrCPVisits_js_db_options_menu_right_box">
 
@@ -428,6 +434,23 @@ class Dashboard_Widget extends Base_Controller {
 	 * @since 1.0.0
 	 */
 	public function get_data_values( $visits_by_page_data_ser ) {
+		/*
+		 * SECURITY NOTE:
+		 * maybe_unserialize() is safe here because visitors cannot submit data
+		 * that is stored in this option. The data is either entered by an
+		 * administrator in the backend or generated automatically by the plugin
+		 * from existing WordPress content and visit counts.
+		 *
+		 * Page, post, product and other WordPress titles come from the existing
+		 * WordPress content and are used only as page names. They are not used
+		 * to store or submit serialized PHP data.
+		 *
+		 * DETAILED EXPLANATION:
+		 * Backend changes require the 'manage_options' capability and the visit
+		 * count is validated as numeric. Frontend data is generated automatically
+		 * by the plugin from the current WordPress content and visit count, without
+		 * allowing visitors to submit arbitrary data to this option.
+		 */
 		$visits_by_page_data_arr = maybe_unserialize( $visits_by_page_data_ser );
 		$html_visits             = '';
 		$total_page_visits       = 0;
@@ -464,24 +487,36 @@ class Dashboard_Widget extends Base_Controller {
 			$input_value_str = json_encode( [ $page_type, $key ] ); // array as a string.
 
 			// ROW START.
-			$html_visits .= "<section class='StrCPVisits_db_list_row StrCPVisits_accordion_btn " . $accordion_class_first . " " . $hidden_report_class . "' data-StrCPV-page-type='" . $page_type . "' data-StrCPV-page-name='" . $key . "'>";
+			$html_visits .= "<section class='StrCPVisits_db_list_row StrCPVisits_accordion_btn "
+												. esc_attr( $accordion_class_first ) . " "
+												. esc_attr( $hidden_report_class )
+												. "' data-StrCPV-page-type='"
+												. esc_attr( $page_type )
+												. "' data-StrCPV-page-name='"
+												. esc_attr( $key )
+												. "'>";
 			$html_visits .=	 "<div class='StrCPVisits_db_list_chkbox_toggle_wrapper hidden'>";
 			$html_visits .=		 "<div class='StrCPVisits_db_list_chkbox_wrapper'>";
-			$html_visits .=			 "<input type='checkbox' class='StrCPVisits_db_list_chkbox' value='" . $input_value_str . "' data-StrCPV-inp-page-type='" . $page_type . "' data-StrCPV-inp-page-name='" . $key . "'>";
+			$html_visits .=			 "<input type='checkbox' class='StrCPVisits_db_list_chkbox' value='"
+														. esc_attr( $input_value_str ) . "' data-StrCPV-inp-page-type='"
+														. esc_attr( $page_type )
+														. "' data-StrCPV-inp-page-name='"
+														. esc_attr( $key )
+														. "'>";
 			$html_visits .=		 "</div>";
 			$html_visits .=	 "</div>";
-			$html_visits .=	 "<span class='StrCPVisits_db_list_page_name'>" . $key . $shop_page . "</span>";
-			$html_visits .=	 "<span class='StrCPVisits_db_list_visits_nr StrCPVisits-visible-indicator'>" . $value . "</span>";
+			$html_visits .=	 "<span class='StrCPVisits_db_list_page_name'>" . esc_html( $key ) . esc_html( $shop_page ) . "</span>";
+			$html_visits .=	 "<span class='StrCPVisits_db_list_visits_nr StrCPVisits-visible-indicator'>" . esc_html( $value ) . "</span>";
 			$html_visits .= "</section>";
 
 							// ROW SubTAB.
-			$html_visits .= "<div class='StrCPVisits_db_list_row_tab StrCPVisits_accordion_panel' data-StrCPV-page-type='" . $page_type . "'>";
+			$html_visits .= "<div class='StrCPVisits_db_list_row_tab StrCPVisits_accordion_panel' data-StrCPV-page-type='" . esc_attr( $page_type ) . "'>";
 			$html_visits .=	 "<div class='StrCPVisits_db_list_row_msg_box'>";
 			$html_visits .=	 "</div>";
 			$html_visits .=	 "<div class='StrCPVisits_db_list_row_inner_wrapper'>";
 			$html_visits .=		 "<form class='StrCPVisits-dblist-page-visits-form'>";
-			$html_visits .=			 "<input type='number' class='StrCPVisits-dblist-page-visits-nr' name='StrCPVisits-dblist-page-visits-nr' value=" . $value . " min='0'>";
-			$html_visits .=			 "<input type='hidden' name='StrCPVisits-dblist-page-name' value='" . $key . "'>";
+			$html_visits .=			 "<input type='number' class='StrCPVisits-dblist-page-visits-nr' name='StrCPVisits-dblist-page-visits-nr' value=" . esc_attr( $value ) . " min='0'>";
+			$html_visits .=			 "<input type='hidden' name='StrCPVisits-dblist-page-name' value='" . esc_attr( $key ) . "'>";
 			$html_visits .=			 "<input type='submit' class='button-primary' value='Update'>";
 			$html_visits .=			 "<!-- Loading spinner -->";
 			$html_visits .=			 "<div class='StrCPVisits-loading-spinner-wrapper-toggle'>";
@@ -492,9 +527,9 @@ class Dashboard_Widget extends Base_Controller {
 			$html_visits .=			 "</div>";
 			$html_visits .=		 "</form>";
 
-			$html_visits .=		 "<a href='#' class='StrCPVisits-dblist-reload-page-btn' data-StrCPVisits-dblist-page-name='" . $key . "'><span class='dashicons dashicons-update'></span></a>";
+			$html_visits .=		 "<a href='#' class='StrCPVisits-dblist-reload-page-btn' data-StrCPVisits-dblist-page-name='" . esc_attr( $key ) . "'><span class='dashicons dashicons-update'></span></a>";
 
-			$html_visits .=		 "<a href='#' class='StrCPVisits-dblist-delete-page-btn' data-StrCPVisits-dblist-page-name='" . $key . "'><span class='dashicons dashicons-trash'></span></a>";
+			$html_visits .=		 "<a href='#' class='StrCPVisits-dblist-delete-page-btn' data-StrCPVisits-dblist-page-name='" . esc_attr( $key ) . "'><span class='dashicons dashicons-trash'></span></a>";
 			$html_visits .=	 "</div>";
 			$html_visits .= "</div>";
 			// ROW END.
@@ -528,6 +563,23 @@ class Dashboard_Widget extends Base_Controller {
 		if ( $hidden_page_reports_ser === false ) {
 			return ''; // Page name is not in hidden list.
 		}
+		/*
+		 * SECURITY NOTE:
+		 * maybe_unserialize() is safe here because visitors cannot submit data
+		 * that is stored in this option. The data is either entered by an
+		 * administrator in the backend or generated automatically by the plugin
+		 * from existing WordPress content and visit counts.
+		 *
+		 * Page, post, product and other WordPress titles come from the existing
+		 * WordPress content and are used only as page names. They are not used
+		 * to store or submit serialized PHP data.
+		 *
+		 * DETAILED EXPLANATION:
+		 * Backend changes require the 'manage_options' capability and the visit
+		 * count is validated as numeric. Frontend data is generated automatically
+		 * by the plugin from the current WordPress content and visit count, without
+		 * allowing visitors to submit arbitrary data to this option.
+		 */
 		// Convert serialized to array
 		$hidden_page_reports_arr = maybe_unserialize( $hidden_page_reports_ser );
 
@@ -650,11 +702,15 @@ class Dashboard_Widget extends Base_Controller {
 	 */
 	public function display_total_visits() {
 		$option_name = STRCPV_OPT_NAME['total_visits'];
-		$total_visits = ( get_option( $option_name ) === false ) ? 0 : get_option( $option_name ); // Set default value to 0 if there are no data.
+		$total_visits = get_option( $option_name );
+		if ( $total_visits === false ) {
+			// Set default value to 0 if there are no data.
+			$total_visits = 0;
+		}
 		?>
 			<div class='StrCPVisits_db_total_visits_box'>
 				<p>TOTAL INDEPENDENT<br>Loads & Reloads</p>
-				<p id="StrCPVisits_js_db_total_visits_box_nr" class='StrCPVisits_db_total_page_visits'><?php echo $total_visits; ?></p>
+				<p id="StrCPVisits_js_db_total_visits_box_nr" class='StrCPVisits_db_total_page_visits'><?php echo esc_html( $total_visits ); ?></p>
 				<!-- Edit icon -->
 				<span id="StrCPVisits_js_db_edit_total_visits_icon" class="StrCPVisits_icon_btn dashicons dashicons-edit"></span>
 				<?php $this->add_hidden_edit_total_visits_box( $total_visits ); ?>
@@ -681,7 +737,7 @@ class Dashboard_Widget extends Base_Controller {
 				<span id="StrCPVisits_js_db_close_edit_total_visits_box" class="StrCPVisits_icon_btn dashicons dashicons-no-alt"></span>
 				<!-- Form -->
 				<form id="StrCPVisits-js-db-edit-total-visits-nr-form">
-					<input type='number' id='StrCPVisits-js-db-edit-total-visits-nr' class='StrCPVisits-db-edit-total-visits-nr' name='StrCPVisits-db-edit-total-visits-nr' value='<?php echo $total_visits; ?>' min='0'>
+					<input type='number' id='StrCPVisits-js-db-edit-total-visits-nr' class='StrCPVisits-db-edit-total-visits-nr' name='StrCPVisits-db-edit-total-visits-nr' value='<?php echo esc_attr( $total_visits ); ?>' min='0'>
 					<input type="submit" class="button" value="Update">
 					<!-- Response box -->
 					<div id="StrCPVisits-js-db-edit-total-visits-respone-box" class="StrCPVisits-db-edit-total-visits-respone-box">

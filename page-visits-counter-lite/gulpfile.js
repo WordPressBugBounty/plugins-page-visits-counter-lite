@@ -90,6 +90,7 @@ gulp.task('admin-scripts', function() {
 
 			// OTHER
 			'src/admin/js/0120-dashboard-widget/0010-edit-total-visits.js',
+			'src/admin/js/0120-dashboard-widget/0015-export-reports.js',
 			'src/admin/js/0120-dashboard-widget/0020-quick-info.js',
 			'src/admin/js/0120-dashboard-widget/0030-reset-response-boxes.js',
 			'src/admin/js/0120-dashboard-widget/0040-recalc-total-page-nr.js',
