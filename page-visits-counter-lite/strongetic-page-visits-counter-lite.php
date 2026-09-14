@@ -8,7 +8,7 @@
  * Plugin Name:       Page Visits Counter - Lite
  * Plugin URI:        https://strongetic.com/free-wp-plugins/page-visits-counter-lite/
  * Description:       Display number of visits for each page in admin dashboard and browser developer-tool/console. Doesn't count page refresh as a new visit...
- * Version:           2.0.2
+ * Version:           2.0.5
  * Requires at least: 6.5
  * Tested up to:      7.1
  * Author:            Denis Botic
