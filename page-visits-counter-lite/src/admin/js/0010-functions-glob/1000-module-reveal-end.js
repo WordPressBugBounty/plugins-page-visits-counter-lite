@@ -8,6 +8,7 @@
 
 return {
 		stripHTMLtags: stripHTMLtags,
+		escapeHtmlAttr: escapeHtmlAttr,
 		countOccurrences: countOccurrences,
 
 };

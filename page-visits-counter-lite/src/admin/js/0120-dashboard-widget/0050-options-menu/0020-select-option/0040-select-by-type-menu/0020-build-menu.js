@@ -55,15 +55,15 @@ const BuildSelectByTypeMenu = (function(){
 
 	// BUILD ONE FILTER OPTION.
 	function buildOption( page_type_name, nr ){
-		let html_el = "<li class='StrCPVisits-select-" + page_type_name + "'>";
-			html_el +=	  "<input type='checkbox'  id='StrCPVisits-select-" + page_type_name + "' class='StrCPVisits-select-by-type-option' value='" + page_type_name + "'>";
+		let html_el = "<li class='StrCPVisits-select-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>";
+			html_el +=	  "<input type='checkbox'  id='StrCPVisits-select-" + StrCPV.escapeHtmlAttr( page_type_name ) + "' class='StrCPVisits-select-by-type-option' value='" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>";
 
 		let number = "<span class='StrCPVisits_js_select_by_type_option_nr'>" + nr + "</span>/<span class='StrCPVisits_js_select_by_type_option_total_nr'>" + nr + "</span>";
 
 		if ( page_type_name === "All-Others" ) {
-			html_el +=	  "<label for='StrCPVisits-select-" + page_type_name + "'>(" + number + ") " + page_type_name + "</label>";
+			html_el +=	  "<label for='StrCPVisits-select-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>(" + number + ") " + StrCPV.escapeHtmlAttr( page_type_name ) + "</label>";
 		} else {
-			html_el +=	  "<label for='StrCPVisits-select-" + page_type_name + "'>(" + number + ") " + page_type_name + ": ...</label>";
+			html_el +=	  "<label for='StrCPVisits-select-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>(" + number + ") " + StrCPV.escapeHtmlAttr( page_type_name ) + ": ...</label>";
 		}
 			html_el +="</li>";
 		return html_el;

@@ -54,17 +54,17 @@ const BuildResetMenu = (function(){
 
 	// BUILD ONE RESET OPTION.
 	function buildOption( page_type_name, nr ){
-		let html_el = "<li class='StrCPVisits-reset-" + page_type_name + "'>";
-			html_el +=	  "<div class='StrCPVisits_db_reset_button button' data-strcpvisits-dbreset-page-type-name='" + page_type_name + "'>";
+		let html_el = "<li class='StrCPVisits-reset-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>";
+			html_el +=	  "<div class='StrCPVisits_db_reset_button button' data-strcpvisits-dbreset-page-type-name='" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>";
 			html_el +=		  buildSpinner();
 			html_el +=		  "<span class='StrCPVisits_js_db_reset_buttons_text'>Reset</span>";
 			html_el +=	  "</div>";
 
 		// Page type name.
 		if ( page_type_name === "All-Others" ) {
-			html_el +=	  "<span class='StrCPVisits_js_db_reset_button_page_type_name'>(<span class='StrCPVisits_js_db_reset_button_page_type_name_nr'>" + nr + "</span>) " + page_type_name + "</span>";
+			html_el +=	  "<span class='StrCPVisits_js_db_reset_button_page_type_name'>(<span class='StrCPVisits_js_db_reset_button_page_type_name_nr'>" + nr + "</span>) " + StrCPV.escapeHtmlAttr( page_type_name ) + "</span>";
 		} else {
-			html_el +=	  "<span class='StrCPVisits_js_db_reset_button_page_type_name'>(<span class='StrCPVisits_js_db_reset_button_page_type_name_nr'>" + nr + "</span>) " + page_type_name + ": ...</span>";
+			html_el +=	  "<span class='StrCPVisits_js_db_reset_button_page_type_name'>(<span class='StrCPVisits_js_db_reset_button_page_type_name_nr'>" + nr + "</span>) " + StrCPV.escapeHtmlAttr( page_type_name ) + ": ...</span>";
 		}
 			html_el +="</li>";
 		return html_el;

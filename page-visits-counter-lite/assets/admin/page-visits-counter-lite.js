@@ -72,6 +72,23 @@ var StrCPV = function () {
 		});
 	}
 
+  /**
+  *
+  * DESC: Before displaying html attributes data on frontend make sure to remove these symbols: &, <, >, ", '
+  * ESCAPE HTML ATTRIBUTE
+  *
+  * @param string  str - The input string to be processed.
+  * @since 2.0.0
+  */
+	function escapeHtmlAttr(str) {
+			return String(str)
+					.replace(/&/g, '&amp;')
+					.replace(/</g, '&lt;')
+					.replace(/>/g, '&gt;')
+					.replace(/"/g, '&quot;')
+					.replace(/'/g, '&#039;');
+	}
+
 	/**
   * COUNT OCCURRENCES in array
   *
@@ -97,6 +114,7 @@ var StrCPV = function () {
 
 	return {
 		stripHTMLtags: stripHTMLtags,
+		escapeHtmlAttr: escapeHtmlAttr,
 		countOccurrences: countOccurrences
 
 	};
@@ -166,16 +184,15 @@ var StrCPV = function () {
 			}
 			addFilterOptionsToMenu(all_other_li_el, options_li_el);
 		}
-
 		// BUILD ONE FILTER OPTION.
 		function buildOption(page_type_name, nr) {
-			var html_el = "<li class='StrCPVisits-" + page_type_name + "'>";
-			html_el += "<input type='checkbox'  id='StrCPVisits-" + page_type_name + "' value='" + page_type_name + "' checked>";
+			var html_el = "<li class='StrCPVisits-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>";
+			html_el += "<input type='checkbox'  id='StrCPVisits-" + StrCPV.escapeHtmlAttr( page_type_name ) + "' value='" + StrCPV.escapeHtmlAttr( page_type_name ) + "' checked>";
 
 			if (page_type_name === "All-Others") {
-				html_el += "<label for='StrCPVisits-" + page_type_name + "'>(<span class='StrCPVisits_js_db_filter_option_page_type_name_nr'>" + nr + "</span>) " + page_type_name + "</label>";
+				html_el += "<label for='StrCPVisits-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>(<span class='StrCPVisits_js_db_filter_option_page_type_name_nr'>" + nr + "</span>) " + StrCPV.escapeHtmlAttr( page_type_name ) + "</label>";
 			} else {
-				html_el += "<label for='StrCPVisits-" + page_type_name + "'>(<span class='StrCPVisits_js_db_filter_option_page_type_name_nr'>" + nr + "</span>) " + page_type_name + ": ...</label>";
+				html_el += "<label for='StrCPVisits-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>(<span class='StrCPVisits_js_db_filter_option_page_type_name_nr'>" + nr + "</span>) " + StrCPV.escapeHtmlAttr( page_type_name ) + ": ...</label>";
 			}
 			html_el += "</li>";
 			return html_el;
@@ -446,17 +463,17 @@ var StrCPV = function () {
 
 		// BUILD ONE RESET OPTION.
 		function buildOption(page_type_name, nr) {
-			var html_el = "<li class='StrCPVisits-reset-" + page_type_name + "'>";
-			html_el += "<div class='StrCPVisits_db_reset_button button' data-strcpvisits-dbreset-page-type-name='" + page_type_name + "'>";
+			var html_el = "<li class='StrCPVisits-reset-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>";
+			html_el += "<div class='StrCPVisits_db_reset_button button' data-strcpvisits-dbreset-page-type-name='" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>";
 			html_el += buildSpinner();
 			html_el += "<span class='StrCPVisits_js_db_reset_buttons_text'>Reset</span>";
 			html_el += "</div>";
 
 			// Page type name.
 			if (page_type_name === "All-Others") {
-				html_el += "<span class='StrCPVisits_js_db_reset_button_page_type_name'>(<span class='StrCPVisits_js_db_reset_button_page_type_name_nr'>" + nr + "</span>) " + page_type_name + "</span>";
+				html_el += "<span class='StrCPVisits_js_db_reset_button_page_type_name'>(<span class='StrCPVisits_js_db_reset_button_page_type_name_nr'>" + nr + "</span>) " + StrCPV.escapeHtmlAttr( page_type_name ) + "</span>";
 			} else {
-				html_el += "<span class='StrCPVisits_js_db_reset_button_page_type_name'>(<span class='StrCPVisits_js_db_reset_button_page_type_name_nr'>" + nr + "</span>) " + page_type_name + ": ...</span>";
+				html_el += "<span class='StrCPVisits_js_db_reset_button_page_type_name'>(<span class='StrCPVisits_js_db_reset_button_page_type_name_nr'>" + nr + "</span>) " + StrCPV.escapeHtmlAttr( page_type_name ) + ": ...</span>";
 			}
 			html_el += "</li>";
 			return html_el;
@@ -1340,15 +1357,15 @@ var StrCPV = function () {
 
 		// BUILD ONE FILTER OPTION.
 		function buildOption(page_type_name, nr) {
-			var html_el = "<li class='StrCPVisits-select-" + page_type_name + "'>";
-			html_el += "<input type='checkbox'  id='StrCPVisits-select-" + page_type_name + "' class='StrCPVisits-select-by-type-option' value='" + page_type_name + "'>";
+			var html_el = "<li class='StrCPVisits-select-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>";
+			html_el += "<input type='checkbox'  id='StrCPVisits-select-" + StrCPV.escapeHtmlAttr( page_type_name ) + "' class='StrCPVisits-select-by-type-option' value='" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>";
 
 			var number = "<span class='StrCPVisits_js_select_by_type_option_nr'>" + nr + "</span>/<span class='StrCPVisits_js_select_by_type_option_total_nr'>" + nr + "</span>";
 
 			if (page_type_name === "All-Others") {
-				html_el += "<label for='StrCPVisits-select-" + page_type_name + "'>(" + number + ") " + page_type_name + "</label>";
+				html_el += "<label for='StrCPVisits-select-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>(" + number + ") " + StrCPV.escapeHtmlAttr( page_type_name ) + "</label>";
 			} else {
-				html_el += "<label for='StrCPVisits-select-" + page_type_name + "'>(" + number + ") " + page_type_name + ": ...</label>";
+				html_el += "<label for='StrCPVisits-select-" + StrCPV.escapeHtmlAttr( page_type_name ) + "'>(" + number + ") " + StrCPV.escapeHtmlAttr( page_type_name ) + ": ...</label>";
 			}
 			html_el += "</li>";
 			return html_el;

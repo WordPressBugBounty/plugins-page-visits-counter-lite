@@ -53,13 +53,13 @@ const BuildFilterMenu = (function(){
 
 	// BUILD ONE FILTER OPTION.
 	function buildOption( page_type_name, nr ){
-		let html_el = "<li class='StrCPVisits-" + page_type_name + "'>";
-			html_el +=	  "<input type='checkbox'  id='StrCPVisits-" + page_type_name + "' value='" + page_type_name + "' checked>";
+		let html_el = "<li class='StrCPVisits-" + escapeHtmlAttr( page_type_name ) + "'>";
+			html_el +=	  "<input type='checkbox'  id='StrCPVisits-" + escapeHtmlAttr( page_type_name ) + "' value='" + escapeHtmlAttr( page_type_name ) + "' checked>";
 
 		if ( page_type_name === "All-Others" ) {
-			html_el +=	  "<label for='StrCPVisits-" + page_type_name + "'>(<span class='StrCPVisits_js_db_filter_option_page_type_name_nr'>" + nr + "</span>) " + page_type_name + "</label>";
+			html_el +=	  "<label for='StrCPVisits-" + escapeHtmlAttr( page_type_name ) + "'>(<span class='StrCPVisits_js_db_filter_option_page_type_name_nr'>" + nr + "</span>) " + escapeHtmlAttr( page_type_name ) + "</label>";
 		} else {
-			html_el +=	  "<label for='StrCPVisits-" + page_type_name + "'>(<span class='StrCPVisits_js_db_filter_option_page_type_name_nr'>" + nr + "</span>) " + page_type_name + ": ...</label>";
+			html_el +=	  "<label for='StrCPVisits-" + escapeHtmlAttr( page_type_name ) + "'>(<span class='StrCPVisits_js_db_filter_option_page_type_name_nr'>" + nr + "</span>) " + escapeHtmlAttr( page_type_name ) + ": ...</label>";
 		}
 			html_el +="</li>";
 		return html_el;

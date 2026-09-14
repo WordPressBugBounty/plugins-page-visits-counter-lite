@@ -66,6 +66,7 @@ gulp.task('admin-scripts', function() {
 			// FUNCTIONS-GLOBAL
 			'src/admin/js/0010-functions-glob/0010-stripHTMLtags.js',
 			'src/admin/js/0010-functions-glob/0020-countOccurances.js',
+			'src/admin/js/0010-functions-glob/0030-escapeHtmlAttr.js',
 
 
 		'src/admin/js/0010-functions-glob/1000-module-reveal-end.js',

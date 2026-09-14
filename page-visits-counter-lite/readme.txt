@@ -4,7 +4,7 @@ Donate link: https://www.fiverr.com/denis555/gladly-accept-5usd-tip-for-my-good-
 Tags: page views, visit stats, page visit counter, wordpress counter, developer tools counter
 Requires at least: 5.0
 Tested up to: 7.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 Requires PHP: 5.6.40
 WC requires at least: 4.9.2
 WC tested up to: 11.1.0
@@ -309,7 +309,7 @@ That visit should be recorded and you should see it in the plugin dashboard widg
 
 == Changelog ==
 
-= 2.0.1 - 13.09.2026 =
+= 2.0.2 - 13.09.2026 =
 
 - Existing input sanitization was verified for AJAX settings_data.
 - XML output was reviewed to ensure post titles are safely encoded.
